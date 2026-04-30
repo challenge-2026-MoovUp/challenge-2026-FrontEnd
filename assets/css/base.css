@@ -1,0 +1,24 @@
+/* Paleta de cores  */
+
+:root {
+    --gradiente-roxo: linear-gradient(to right, #4b3fe4, rgba(108, 98, 240, 0.8));
+    --gradiente-branco: linear-gradient(to right, #f7f6ff, #a8c8e8);
+    --roxo-principal: #4b3fe4;
+    --roxo-opaco: rgba(108, 98, 240, 0.5);
+    --roxo-claro: #6c62f0;
+    --azul-escuro: #4f5bd5;
+    --azul-claro: #5b9bd5;
+    --azul-pastel: #a8c8e8;
+    --lavanda: #f7f6ff;
+    --ambar: #F5B842;
+    --azul-opaco: #7076cf7b;
+    --azul-pastel-opaco: #a8c8e85b;
+    --roxo-mais-opaco: rgba(131, 124, 224, 0.251);
+    --ambar-opaco: #f5b9427a;
+    --vermelho-opaco: #d566665f;
+    --verde-opaco: #66d5775f;
+    --verde: #499855;
+    --indigo-profundo: #1a1240;
+    --indigo-acizentado: #29253d;
+    --transition: all .5s ease;
+}
