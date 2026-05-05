@@ -1,0 +1,21 @@
+/* Fontes externas */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap');
+
+/* Base */
+@import url('./variables.css');
+@import url('./reset.css');
+
+/* Layouts */
+@import url('../layouts/header.css');
+@import url('../layouts/container.css');
+@import url('../layouts/footer.css');
+@import url('../layouts/grid.css');
+
+/* Componentes */
+@import url('../components/cards.css');
+@import url('../components/button.css');
+@import url('../components/type.css');
+@import url('../components/icon.css');
+
+/* Paginas */
+@import url('../pages/home.css');
