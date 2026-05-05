@@ -1,0 +1,39 @@
+/* Cabecalho */
+
+.header__content {
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    display: flex;
+    padding: 20px;
+}
+
+/* Navegacao */
+
+.nav {
+    display: flex;
+    font-size: 18px;
+    gap: 20px;
+    justify-content: center;
+    width: 80%;
+    word-wrap: normal;
+}
+
+.nav__active {
+    color: var(--indigo);
+    font-family: 'Sora', sans-serif;
+    font-weight: bold;
+}
+
+/* Logo */
+
+.header__logo {
+    margin: 0;
+    padding-top: 2px;
+    transform: translateY(6px);
+    width: 13rem;
+}
+
+.header__logo img {
+    height: auto;
+    width: 100%;
+}

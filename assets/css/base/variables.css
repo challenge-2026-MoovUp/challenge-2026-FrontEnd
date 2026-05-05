@@ -1,0 +1,34 @@
+/* Variaveis globais */
+
+:root {
+    /* Gradientes */
+    --gradiente-branco: linear-gradient(to right, #f7f6ff, #a8c8e8);
+    --gradiente-roxo: linear-gradient(to right, #4b3fe4, rgba(108, 98, 240, 0.8));
+
+    /* Cores principais */
+    --ambar: #F5B842;
+    --indigo-profundo: #1a1240;
+    --lavanda: #f7f6ff;
+    --roxo-claro: #6c62f0;
+    --roxo-principal: #4b3fe4;
+
+    /* Cores secundarias */
+    --roxo-escuro: #4037c7;
+    --azul-claro: #5b9bd5;
+    --azul-escuro: #4f5bd5;
+    --azul-pastel: #a8c8e8;
+    --indigo-acizentado: #29253d;
+    --verde: #499855;
+
+    /* Cores com transparencia */
+    --ambar-opaco: #f5b9427a;
+    --azul-opaco: #7076cf7b;
+    --azul-pastel-opaco: #a8c8e85b;
+    --roxo-mais-opaco: rgba(131, 124, 224, 0.251);
+    --roxo-opaco: rgba(108, 98, 240, 0.5);
+    --verde-opaco: #66d5775f;
+    --vermelho-opaco: #d566665f;
+
+    /* Transicoes */
+    --transition: all .5s ease;
+}

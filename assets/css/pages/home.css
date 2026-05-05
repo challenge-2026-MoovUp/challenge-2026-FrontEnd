@@ -1,0 +1,79 @@
+/* Hero */
+
+.hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4rem;
+    margin: 7rem 7rem 0;
+    width: 80%;
+}
+
+.hero__content {
+    width: 60%;
+}
+
+.hero .title {
+    width: 90%;
+    font-size: 3rem;
+}
+
+.hero .title span {
+    background: var(--gradiente-roxo);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero .subtitle {
+    color: #616161;
+    font-size: 1.3rem;
+    margin: 50px 0 60px;
+    width: 70%;
+}
+
+/* Imagem do aplicativo */
+
+.phone {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    margin: 0;
+    order: 1;
+    transform: translateY(-4rem);
+    width: auto;
+}
+
+.phone img {
+    height: auto;
+    filter: drop-shadow(0 40px 80px var(--roxo-opaco));
+    width: 300px;
+}
+
+/* Recursos */
+
+.feat__title {
+    color: var(--lavanda);
+    font-size: 3rem;
+    width: 50%;
+}
+
+.feat__title span {
+    color: var(--ambar);
+}
+
+.feature .about {
+    color: #ccc;
+    font-size: .8rem;
+    font-weight: 100;
+    padding: 30px 0;
+}
+
+/* Variacoes dos icones de recursos */
+
+.icon1 { background-color: var(--azul-opaco); }
+.icon2 { background-color: var(--ambar-opaco); }
+.icon3 { background-color: var(--roxo-mais-opaco); }
+.icon4 { background-color: var(--verde-opaco); }
+.icon5 { background-color: var(--vermelho-opaco); }
+.icon6 { background-color: var(--azul-pastel-opaco); }

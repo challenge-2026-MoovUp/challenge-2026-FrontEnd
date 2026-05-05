@@ -1,0 +1,28 @@
+/* Etiqueta base */
+
+.type {
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 0 20px;
+    padding: 5px 20px;
+}
+
+/* Etiqueta do hero */
+
+.hero .type {
+    background-color: var(--roxo-opaco);
+    color: var(--ambar);
+}
+
+.hero .type span {
+    color: var(--roxo-principal);
+    padding-left: 10px;
+}
+
+/* Etiqueta da secao de recursos */
+
+.feat__tag {
+    background-color: var(--ambar-opaco);
+    color: var(--ambar);
+}

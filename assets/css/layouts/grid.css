@@ -1,0 +1,27 @@
+/* Grid de recursos */
+
+.feat__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto 0;
+}
+
+/* Secao de recursos */
+
+.feat__section {
+    background-color: var(--indigo-profundo);
+    margin: 6rem 0;
+    min-height: 100vh;
+    padding: 5rem 0;
+}
+
+/* Grid de passos */
+
+.steps__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}

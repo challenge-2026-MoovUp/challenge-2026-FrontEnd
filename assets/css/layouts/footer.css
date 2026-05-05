@@ -1,0 +1,56 @@
+/* Rodape */
+
+.footer {
+    align-items: center;
+    background-color: var(--indigo-profundo);
+    color: #ccc;
+    display: flex;
+    font-size: .8rem;
+    font-weight: 50;
+    justify-content: space-between;
+    position: relative;
+}
+
+.footer a {
+    color: #ccc;
+}
+
+footer a:not(:last-child)::after {
+    content: "•";
+    margin: 0 8px;
+}
+
+/* Logo do rodape */
+
+.footer .logo {
+    margin: 20px;
+    background: var(--gradiente-branco);
+    -webkit-mask: url("../../images/soulup-logo.png") center / contain no-repeat;
+    mask: url("../../images/soulup-logo.png") center / contain no-repeat;
+    width: 8rem;
+}
+
+.footer .logo img {
+    display: block;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    width: 100%;
+}
+
+/* Links do rodape */
+
+.footer .item {
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+/* Direitos autorais */
+
+.footer .marca {
+    margin: 20px;
+    text-align: right;
+}

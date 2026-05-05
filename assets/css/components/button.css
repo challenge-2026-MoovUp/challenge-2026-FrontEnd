@@ -1,0 +1,44 @@
+/* Botao base */
+
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    justify-items: center;
+    margin-right: 30px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+/* Botao primario */
+
+.btn__primary {
+    border: 2px solid var(--roxo-principal);
+    background-color: var(--roxo-principal);
+    color: var(--lavanda);
+    transition: var(--transition);
+}
+
+.btn__primary:hover {
+    background-color: var(--roxo-escuro);
+}
+
+/* Botao primario no cabecalho */
+
+.header .btn__primary:hover {
+    border: 2px solid var(--indigo-profundo);
+    background-color: transparent;
+    color: var(--indigo-profundo);
+}
+
+/* Botao secundario */
+
+.outline__btn {
+    border: 2px solid var(--indigo-profundo);
+    color: var(--indigo-profundo);
+}
+
+.outline__btn:hover {
+    box-shadow: 0 4px 12px var(--roxo-opaco);
+}

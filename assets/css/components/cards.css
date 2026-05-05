@@ -1,0 +1,120 @@
+/* Cards de estatisticas */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    font-size: 1rem;
+    margin: 30px 50px 90px;
+}
+
+.stat__card {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    filter: drop-shadow(0 20px 40px var(--roxo-mais-opaco));
+    font-weight: bolder;
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.stat__card .numero {
+    background: var(--gradiente-roxo);
+    background-clip: text;
+    font-size: 3rem;
+    font-weight: 800;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat__card .descricao {
+    font-weight: 700;
+}
+
+/* Cards de recursos */
+
+.feature {
+    background-color: var(--indigo-acizentado);
+    border-radius: 10px;
+    color: var(--lavanda);
+    font-weight: bolder;
+    height: 13rem;
+    padding: 20px 15px;
+}
+
+/* Area dos passos */
+
+.steps {
+    margin: 5rem 50px;
+}
+
+.steps .type {
+    background-color: var(--roxo-opaco);
+    border-radius: 30px;
+    color: var(--roxo-principal);
+    display: inline-block;
+    font-size: 1rem;
+    margin: 30px 0;
+    padding: 5px 20px;
+}
+
+.steps .title {
+    width: 90%;
+    font-size: 3rem;
+}
+
+.steps .title span {
+    background: var(--gradiente-roxo);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.steps__topic {
+    font-weight: 900;
+}
+
+.steps .about {
+    color: #737272;
+    font-size: 15px;
+    padding: 1rem 0;
+}
+
+.step__card {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0 20px 40px var(--roxo-mais-opaco));
+    gap: 12px;
+    margin-top: 4rem;
+    padding: 24px;
+}
+
+.steps .num {
+    align-self: flex-start;
+    border-radius: 100%;
+    display: inline-block;
+    font-weight: bolder;
+    padding: 3px 10px;
+}
+
+.steps .num1 {
+    background-color: var(--roxo-principal);
+    color: #fff;
+    padding: 3px 12px;
+}
+
+.steps .num2 {
+    background-color: var(--azul-pastel);
+    color: #fff;
+}
+
+.steps .num3 {
+    background-color: var(--verde);
+    color: #fff;
+}
+
+.steps .num4 {
+    background-color: var(--ambar);
+}

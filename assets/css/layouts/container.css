@@ -1,0 +1,16 @@
+/* Secao hero */
+
+.hero__section {
+    align-items: center; /* alinha verticalmente */
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px;
+    justify-content: space-between; /* separa os lados */
+}
+
+/* Container de recursos */
+
+.feat__container {
+    margin: 0 auto;
+    width: 80%;
+}
