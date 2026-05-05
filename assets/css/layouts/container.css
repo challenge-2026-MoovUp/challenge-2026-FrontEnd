@@ -1,6 +1,6 @@
 /* Secao hero */
 
-.hero__section {
+.page__home .hero__section {
     align-items: center; /* alinha verticalmente */
     display: flex;
     flex-wrap: nowrap;

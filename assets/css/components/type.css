@@ -10,19 +10,19 @@
 
 /* Etiqueta do hero */
 
-.hero .type {
+.tag__roxo{
     background-color: var(--roxo-opaco);
-    color: var(--ambar);
+    color: var(--roxo-principal);
 }
 
-.hero .type span {
-    color: var(--roxo-principal);
+.tag__roxo span {
+    color: var(--ambar);
     padding-left: 10px;
 }
 
 /* Etiqueta da secao de recursos */
 
-.feat__tag {
+.tag__ambar {
     background-color: var(--ambar-opaco);
     color: var(--ambar);
 }

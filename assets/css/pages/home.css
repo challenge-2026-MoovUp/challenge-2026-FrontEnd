@@ -1,6 +1,6 @@
 /* Hero */
 
-.hero {
+.page__home .container__hero {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -9,23 +9,23 @@
     width: 80%;
 }
 
-.hero__content {
+.page__home .hero__content {
     width: 60%;
 }
 
-.hero .title {
+.page__home .title {
     width: 90%;
     font-size: 3rem;
 }
 
-.hero .title span {
+.page__home .title span {
     background: var(--gradiente-roxo);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.hero .subtitle {
+.page__home .subtitle {
     color: #616161;
     font-size: 1.3rem;
     margin: 50px 0 60px;
@@ -34,7 +34,7 @@
 
 /* Imagem do aplicativo */
 
-.phone {
+.page__home .phone {
     display: flex;
     justify-content: start;
     align-items: flex-start;
@@ -44,7 +44,7 @@
     width: auto;
 }
 
-.phone img {
+.page__home .phone img {
     height: auto;
     filter: drop-shadow(0 40px 80px var(--roxo-opaco));
     width: 300px;
@@ -52,17 +52,17 @@
 
 /* Recursos */
 
-.feat__title {
+.page__home .feat__title {
     color: var(--lavanda);
     font-size: 3rem;
     width: 50%;
 }
 
-.feat__title span {
+.page__home .feat__title span {
     color: var(--ambar);
 }
 
-.feature .about {
+.page__home .feature .about {
     color: #ccc;
     font-size: .8rem;
     font-weight: 100;
@@ -71,9 +71,9 @@
 
 /* Variacoes dos icones de recursos */
 
-.icon1 { background-color: var(--azul-opaco); }
-.icon2 { background-color: var(--ambar-opaco); }
-.icon3 { background-color: var(--roxo-mais-opaco); }
-.icon4 { background-color: var(--verde-opaco); }
-.icon5 { background-color: var(--vermelho-opaco); }
-.icon6 { background-color: var(--azul-pastel-opaco); }
+.page__home .icon1 { background-color: var(--azul-opaco); }
+.page__home .icon2 { background-color: var(--ambar-opaco); }
+.page__home .icon3 { background-color: var(--roxo-mais-opaco); }
+.page__home .icon4 { background-color: var(--verde-opaco); }
+.page__home .icon5 { background-color: var(--vermelho-opaco); }
+.page__home .icon6 { background-color: var(--azul-pastel-opaco); }
