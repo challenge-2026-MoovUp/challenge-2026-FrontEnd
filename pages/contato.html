@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/base/import.css">
+    <link rel="icon" type="image/png" href="../assets/images/soulup-icon.png?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Contato</title>
 </head>
-<body>
+<body class="page__contato">
     <header class="header">
         <div class="header__content">
             <div class="header__logo">
@@ -21,5 +23,100 @@
             <a href="#" class="btn btn__primary">Começar grátis</a>
         </div>
     </header>
+
+    <main>
+        <section class="contact__hero">
+            <div class="container__hero">
+                <div class="hero__content">
+                    <p class="type tag__roxo"><span><i class="fa-solid fa-star"></i></span>Fale conosco</p>
+                    <h1 class="title">Estamos aqui para ajudar</h1>
+                    <p class="dark__subtitle">Tem alguma dúvida, sugestão ou problema? Nossa equipe responde em até 24 horas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact__content">
+            <div class="contact__info">
+                <h2 class="contact__title">Informações de contato</h2>
+                <p class="contact__subtitle">Escolha o canal que preferir para nos contatar.</p>
+                <div class="contact__info-cards">
+                    <div class="contact__card">
+                        <div class="contact__card-icon">📧</div>
+                        <div class="contact__card-text">
+                            <h3 class="contact__card-label">E-mail</h3>
+                            <p class="contact__card-value">contato@pontosapp.com.br</p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">📱</div>
+                        <div class="contact__card-text">
+                            <h3 class="contact__card-label">WhatsApp</h3>
+                            <p class="contact__card-value">+55 (11) 99999-0000</p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">🕐</div>
+                        <div class="contact__card-text">
+                            <h3 class="contact__card-label">Horário de atendimento</h3>
+                            <p class="contact__card-value">Seg–Sex, 09h às 18h</p>
+                        </div>
+                    </div>
+                    <div class="contact__card">
+                        <div class="contact__card-icon">📍</div>
+                        <div class="contact__card-text">
+                            <h3 class="contact__card-label">Endereço</h3>
+                            <address class="contact__card-value">Av. Paulista, 1000 – São Paulo, SP</address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact__form">
+                <h2 class="contact__form-title">Enviar mensagem</h2>
+                <div class="contact__form-row">
+                    <label class="contact__label">
+                        <p>Nome</p>
+                        <input class="contact__input" type="text" placeholder="Seu nome completo">
+                    </label>
+                    <label class="contact__label">
+                        <p>E-mail</p>
+                        <input class="contact__input" type="email" placeholder="seu@email.com">
+                    </label>
+                </div>
+                <label class="contact__label">
+                    <p>Assunto</p>
+                    <select class="contact__select">
+                        <option class="placeholder">Problema com pontos</option>
+                        <option class="placeholder">Dúvida sobre resgate</option>
+                        <option class="placeholder">Sugestão</option>
+                        <option class="placeholder">Outro</option>
+                    </select>
+                </label>
+            
+                <label class="contact__label">
+                    <p>Mensagem</p>
+                    <textarea class="contact__textarea" placeholder="Descreva sua dúvida ou problema com detalhes..."></textarea>
+                </label>
+            
+                <button class="btn btn__primary contact__btn">Enviar mensagem →</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="logo">
+                <img src="./assets/images/soulup_logo copiar.png" alt="Logo da soulup">
+            </div>
+            <div class="item">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+                <a href="#">Suporte</a>
+            </div>
+            <div class="marca">
+                <p>&reg;2026 SoulUp. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
