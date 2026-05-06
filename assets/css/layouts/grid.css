@@ -3,10 +3,18 @@
 .feat__grid {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
-    gap: 50px;
-    align-items: center;
+    gap: 3rem;
+    align-items: stretch;
     justify-content: center;
     margin: 5rem auto 0;
+}
+
+/* Grid de passos */
+
+.steps__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
 /* Secao de recursos */
@@ -18,10 +26,9 @@
     padding: 5rem 0;
 }
 
-/* Grid de passos */
+/* Grid de contato */
 
-.steps__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+.contact__content {
+    display: flex;
+    justify-content: space-around;
 }

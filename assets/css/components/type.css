@@ -17,7 +17,7 @@
 
 .tag__roxo span {
     color: var(--ambar);
-    padding-left: 10px;
+    margin-right: 5px;
 }
 
 /* Etiqueta da secao de recursos */

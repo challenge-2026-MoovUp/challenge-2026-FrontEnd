@@ -1,6 +1,6 @@
 /* Secao hero */
 
-.page__home .hero__section {
+.home__hero {
     align-items: center; /* alinha verticalmente */
     display: flex;
     flex-wrap: nowrap;
@@ -13,4 +13,26 @@
 .feat__container {
     margin: 0 auto;
     width: 80%;
+}
+
+.title {
+    width: 90%;
+    font-size: 3rem;
+}
+
+.hero__content .subtitle {
+    color: #616161;
+    font-size: 1.3rem;
+    margin: 50px 0 60px;
+    width: 70%;
+}
+.hero__content .dark__subtitle {
+    color: #cccccc;
+    font-size: 1.3rem;
+    margin: 50px 0 60px;
+    width: 70%;
+}
+
+.contact__content {
+    margin: 7rem 0;
 }

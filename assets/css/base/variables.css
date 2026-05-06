@@ -4,7 +4,8 @@
     /* Gradientes */
     --gradiente-branco: linear-gradient(to right, #f7f6ff, #a8c8e8);
     --gradiente-roxo: linear-gradient(to right, #4b3fe4, rgba(108, 98, 240, 0.8));
-
+    --gradiente-roxo-escuro: linear-gradient(to right, #4b3fe4, rgba(25, 23, 59, 1));
+    
     /* Cores principais */
     --ambar: #F5B842;
     --indigo-profundo: #1a1240;

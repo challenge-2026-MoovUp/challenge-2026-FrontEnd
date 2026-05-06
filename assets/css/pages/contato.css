@@ -1,0 +1,33 @@
+.contact__hero {
+    background: var(--gradiente-roxo-escuro);
+    color: var(--lavanda);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+}
+
+.page__contato .container__hero {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.page__contato .hero__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+}
+
+.page__contato .title,
+.page__contato .dark__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page__contato .tag__roxo {
+    color: var(--lavanda);
+}

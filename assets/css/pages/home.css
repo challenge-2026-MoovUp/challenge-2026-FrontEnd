@@ -13,9 +13,16 @@
     width: 60%;
 }
 
-.page__home .title {
-    width: 90%;
-    font-size: 3rem;
+.page__home .hero__actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    word-wrap:normal;
+}
+
+.page__home .hero__actions .btn {
+    margin-right: 0;
+    white-space: nowrap;
 }
 
 .page__home .title span {
@@ -25,7 +32,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.page__home .subtitle {
+.subtitle {
     color: #616161;
     font-size: 1.3rem;
     margin: 50px 0 60px;
