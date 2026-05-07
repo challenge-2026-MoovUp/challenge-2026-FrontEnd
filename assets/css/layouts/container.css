@@ -36,3 +36,12 @@
 .contact__content {
     margin: 7rem 0;
 }
+
+.page__faq .main__title {
+    margin: 40px 0 0;
+    font-size: 20px;
+    color: var(--roxo-principal);
+    text-align: start;
+    align-self: center;
+    width: min(800px, 100%);
+}
