@@ -1,0 +1,85 @@
+/* Centraliza o grupo de accordions na pagina */
+.container__cards-account {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Define a aparencia e a largura de cada bloco */
+.accordion{
+    text-align: left;
+    padding: 1rem 0;
+    width: min(800px, 100%);
+    max-width: 800px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    overflow: hidden;
+    filter: drop-shadow(0 10px 10px var(--roxo-mais-opaco));
+    interpolate-size: allow-keywords;
+}
+
+/* Organiza a pergunta e o icone dentro do cabecalho clicavel */
+.accordion summary{
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+/* Remove a seta padrao do navegador */
+.accordion summary::-webkit-details-marker{
+    display: none;
+}
+
+/* Mantem o conteudo recolhido e prepara a transicao de abrir/fechar */
+.accordion::details-content {
+    block-size: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+        block-size 0.45s ease,
+        opacity 0.3s ease,
+        content-visibility 0.45s ease allow-discrete;
+}
+
+/* Expande o conteudo quando o details esta aberto */
+.accordion[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+}
+
+/* Estiliza o texto da resposta */
+.accordion-content{
+    padding: 0 20px 20px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Estiliza o icone do Font Awesome */
+.accordion summary i {
+    color: var(--roxo-principal);
+    font-size: 20px;
+    transition: transform 0.5s;
+}
+
+/* Gira o icone quando o bloco esta aberto */
+.accordion[open] summary i {
+    transform: rotate(180deg);
+}
+
+/* Faz a animacao comecar do estado fechado ao abrir */
+@starting-style {
+    .accordion[open]::details-content {
+        block-size: 0;
+        opacity: 0;
+    }
+}
