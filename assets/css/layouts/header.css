@@ -11,7 +11,7 @@
 
 .nav {
     display: flex;
-    font-size: 18px;
+    font-size: 15px;
     gap: 20px;
     justify-content: center;
     width: 80%;
@@ -30,10 +30,15 @@
     margin: 0;
     padding-top: 2px;
     transform: translateY(6px);
-    width: 13rem;
+    width: 10rem;
 }
 
 .header__logo img {
     height: auto;
     width: 100%;
+}
+
+.btn {
+    font-size: .8rem;
+    padding: 15px 15px;
 }
