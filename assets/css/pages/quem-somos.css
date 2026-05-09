@@ -1,0 +1,172 @@
+/* Hero da pagina Quem Somos */
+.info__hero {
+    background: var(--gradiente-indigo);
+    color: var(--lavanda);
+    align-items: center;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    text-align: start;
+}
+
+/* Destaque do titulo do hero */
+.page__info .title span {
+    color: var(--ambar);
+}
+
+/* Container interno do hero */
+.page__info .container__hero {
+    display: flex;
+    justify-content: start;
+    margin: 3rem;
+    width: 100%;
+}
+
+/* Conteudo textual do hero */
+.page__info .hero__content {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Etiqueta do hero */
+.page__info .tag__roxo {
+    font-size: 15px;
+}
+
+/* Secao de informacoes institucionais */
+.info__content {
+    display: flex;
+    justify-content: space-around;
+    margin: 7rem 7rem 2rem;
+    padding: 0 3rem;
+}
+
+/* Coluna de detalhes da secao */
+.info__details {
+    text-align: left;
+}
+
+/* Titulo da secao de informacoes */
+.page__info .info__title {
+    font-size: 2.5rem;
+}
+
+/* Destaque em gradiente do titulo da secao */
+.page__info .info__title span {
+    background: var(--gradiente-roxo);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Card de informacao */
+.info__card {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 2rem 0;
+    max-width: 600px;
+    padding: 1.5rem;
+}
+
+/* Icone quadrado do card */
+.info__card-icon {
+    align-items: center;
+    background-color: var(--azul-opaco);
+    border-radius: 10px;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    height: 48px;
+    justify-content: center;
+    margin: 0 20px 0 0;
+    width: 48px;
+}
+
+/* Texto do card */
+.info__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-right: 5rem;
+    text-align: left;
+}
+
+/* Valor principal do card */
+.info__card-value {
+    font-size: 0.8rem;
+}
+
+.team__details {
+    background: var(--gradiente-indigo);
+    height: 60vh;
+    padding-bottom: 100px;
+
+}
+
+.page__info .team__cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 240px);
+    justify-content: center;
+    margin-inline: auto;
+    max-width: 1100px;
+}
+
+.page__info .team__cards .stat__card {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    justify-content: center;
+    padding: 20px 16px;
+    width: 100%;
+}
+
+.page__info .team__icon {
+    max-width: 100px;
+    border-radius: 8px;
+}
+
+.page__info .team__icon--pedro {
+    height: 100px;
+    object-fit: cover;
+    width: 100px;
+}
+
+.team__card-box .team__link {
+    width: 42px;
+}
+
+.team__card-box .team__card-label{
+    font-weight: 800;
+    line-height: 1.2;
+    padding: 8px 4px 4px;
+}
+
+.team__card-box .team__card-rm{
+    color: #616161;
+    font-weight: 800;
+    padding: 4px 0 8px;
+}
+
+.team__details .team__title {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.team__details .team__title span {
+    color: var(--ambar);
+}
+
+.team__head {
+    padding: 2rem;
+}
+

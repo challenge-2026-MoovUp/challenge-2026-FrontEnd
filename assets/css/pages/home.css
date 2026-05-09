@@ -1,30 +1,42 @@
-/* Hero */
-
-.page__home .container__hero {
+/* Secao hero da home */
+.page__home .main__hero {
+    align-items: center;
     display: flex;
-    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 50px;
     justify-content: space-between;
+}
+
+/* Container interno do hero */
+.page__home .container__hero {
+    align-items: flex-start;
+    display: flex;
     gap: 4rem;
+    justify-content: space-between;
     margin: 7rem 7rem 0;
     width: 80%;
 }
 
+/* Conteudo textual do hero */
 .page__home .hero__content {
     width: 60%;
 }
 
+/* Grupo de botoes do hero */
 .page__home .hero__actions {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 30px;
     word-wrap:normal;
 }
 
+/* Botao dentro das acoes do hero */
 .page__home .hero__actions .btn {
     margin-right: 0;
     white-space: nowrap;
 }
 
+/* Destaque em gradiente no titulo */
 .page__home .title span {
     background: var(--gradiente-roxo);
     background-clip: text;
@@ -32,43 +44,51 @@
     -webkit-text-fill-color: transparent;
 }
 
-.subtitle {
+/* Subtitulo da home */
+.page__home .subtitle {
     color: #616161;
     font-size: 1.3rem;
     margin: 50px 0 60px;
     width: 70%;
 }
 
-/* Imagem do aplicativo */
-
+/* Container da imagem do aplicativo */
 .page__home .phone {
+    align-items: flex-start;
     display: flex;
     justify-content: start;
-    align-items: flex-start;
     margin: 0;
     order: 1;
     transform: translateY(-4rem);
     width: auto;
 }
 
+/* Imagem do smartphone */
 .page__home .phone img {
-    height: auto;
     filter: drop-shadow(0 40px 80px var(--roxo-opaco));
+    height: auto;
     width: 300px;
 }
 
-/* Recursos */
+/* Container da secao de recursos */
+.feat__container {
+    margin: 0 auto;
+    width: 80%;
+}
 
+/* Titulo da secao de recursos */
 .page__home .feat__title {
     color: var(--lavanda);
     font-size: 3rem;
     width: 50%;
 }
 
+/* Destaque do titulo de recursos */
 .page__home .feat__title span {
     color: var(--ambar);
 }
 
+/* Texto dos cards de recursos */
 .page__home .feature .about {
     color: #ccc;
     font-size: .8rem;
@@ -76,11 +96,20 @@
     padding: 30px 0;
 }
 
-/* Variacoes dos icones de recursos */
-
+/* Cor do primeiro icone de recurso */
 .page__home .icon1 { background-color: var(--azul-opaco); }
+
+/* Cor do segundo icone de recurso */
 .page__home .icon2 { background-color: var(--ambar-opaco); }
+
+/* Cor do terceiro icone de recurso */
 .page__home .icon3 { background-color: var(--roxo-mais-opaco); }
+
+/* Cor do quarto icone de recurso */
 .page__home .icon4 { background-color: var(--verde-opaco); }
+
+/* Cor do quinto icone de recurso */
 .page__home .icon5 { background-color: var(--vermelho-opaco); }
+
+/* Cor do sexto icone de recurso */
 .page__home .icon6 { background-color: var(--azul-pastel-opaco); }

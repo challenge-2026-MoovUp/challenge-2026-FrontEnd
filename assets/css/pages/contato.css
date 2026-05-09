@@ -1,19 +1,22 @@
+/* Hero da pagina de contato */
 .contact__hero {
     background: var(--gradiente-roxo-escuro);
     color: var(--lavanda);
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
     height: 50vh;
+    justify-content: center;
     text-align: center;
 }
 
+/* Container interno do hero */
 .page__contato .container__hero {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
+/* Conteudo textual do hero */
 .page__contato .hero__content {
     align-items: center;
     display: flex;
@@ -22,12 +25,133 @@
     width: 100%;
 }
 
+/* Centraliza titulo e subtitulo do hero */
 .page__contato .title,
 .page__contato .dark__subtitle {
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Ajusta a cor da etiqueta no hero */
 .page__contato .tag__roxo {
     color: var(--lavanda);
+}
+
+/* Secao principal de contato */
+.contact__content {
+    display: flex;
+    justify-content: space-around;
+    margin: 7rem 0;
+}
+
+/* Card com informacao de contato */
+.contact__card {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+/* Icone dos cards de contato */
+.contact__card-icon {
+    align-items: center;
+    background-color: var(--azul-opaco);
+    border-radius: 10px;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: flex-start;
+    margin: 0 20px;
+    padding: 0 10px;
+}
+
+/* Texto dos cards de contato */
+.contact__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-right: 5rem;
+}
+
+/* Formulario de contato */
+.contact__form {
+    align-items: flex-start;
+    background-color: #fff;
+    border: 1px solid rgba(108, 98, 240, 0.18);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    justify-content: flex-start;
+    max-width: 640px;
+    padding: 40px;
+    width: 100%;
+}
+
+/* Titulo do formulario */
+.contact__form-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Linha com campos lado a lado */
+.contact__form-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Campo dentro da linha do formulario */
+.contact__form-row .contact__label {
+    flex: 1;
+}
+
+/* Placeholder dos campos */
+.contact__label ::placeholder {
+    color: #757575;
+    font-weight: 200;
+}
+
+/* Rotulo dos campos */
+.contact__label {
+    font-weight: 800;
+    width: 100%;
+}
+
+/* Campos do formulario */
+.contact__input,
+.contact__select,
+.contact__textarea {
+    background-color: var(--lavanda);
+    border: 1px solid rgba(108, 98, 240, 0.2);
+    border-radius: 12px;
+    color: var(--indigo-profundo);
+    font: inherit;
+    padding: 14px 18px;
+    width: 100%;
+}
+
+/* Campo de selecao */
+.contact__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231a1240' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-position: right 22px center;
+    background-repeat: no-repeat;
+    color: #757575;
+    font-weight: 200;
+    padding-right: 54px;
+}
+
+/* Area de texto */
+.contact__textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Botao de envio */
+.contact__btn {
+    border-radius: 12px;
+    margin: 16px 0 0;
+    width: 100%;
 }
