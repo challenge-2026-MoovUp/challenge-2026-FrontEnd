@@ -8,7 +8,7 @@
 }
 
 /* Define a aparencia e a largura de cada bloco */
-.accordion{
+.accordion {
     text-align: left;
     padding: 1rem 0;
     width: min(800px, 100%);
@@ -22,7 +22,7 @@
 }
 
 /* Organiza a pergunta e o icone dentro do cabecalho clicavel */
-.accordion summary{
+.accordion summary {
     list-style: none;
     cursor: pointer;
     padding: 18px 20px;
@@ -35,7 +35,7 @@
 }
 
 /* Remove a seta padrao do navegador */
-.accordion summary::-webkit-details-marker{
+.accordion summary::-webkit-details-marker {
     display: none;
 }
 
@@ -57,7 +57,7 @@
 }
 
 /* Estiliza o texto da resposta */
-.accordion-content{
+.accordion-content {
     padding: 0 20px 20px;
     color: #666;
     line-height: 1.6;

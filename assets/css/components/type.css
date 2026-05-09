@@ -1,5 +1,4 @@
 /* Etiqueta base */
-
 .type {
     border-radius: 30px;
     display: inline-block;
@@ -8,20 +7,19 @@
     padding: 5px 20px;
 }
 
-/* Etiqueta do hero */
-
-.tag__roxo{
+/* Etiqueta roxa */
+.tag__roxo {
     background-color: var(--roxo-opaco);
     color: var(--roxo-principal);
 }
 
+/* Icone dentro da etiqueta roxa */
 .tag__roxo span {
     color: var(--ambar);
     margin-right: 5px;
 }
 
-/* Etiqueta da secao de recursos */
-
+/* Etiqueta ambar */
 .tag__ambar {
     background-color: var(--ambar-opaco);
     color: var(--ambar);
