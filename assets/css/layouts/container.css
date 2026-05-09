@@ -1,47 +1,21 @@
-/* Secao hero */
-
-.home__hero {
-    align-items: center; /* alinha verticalmente */
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 50px;
-    justify-content: space-between; /* separa os lados */
-}
-
-/* Container de recursos */
-
-.feat__container {
-    margin: 0 auto;
-    width: 80%;
-}
-
+/* Titulo principal reutilizavel */
 .title {
-    width: 90%;
     font-size: 3rem;
+    width: 90%;
 }
 
+/* Subtitulo claro dentro de heros */
 .hero__content .subtitle {
     color: #616161;
     font-size: 1.3rem;
     margin: 50px 0 60px;
     width: 70%;
 }
+
+/* Subtitulo escuro dentro de heros */
 .hero__content .dark__subtitle {
     color: #cccccc;
     font-size: 1.3rem;
     margin: 50px 0 60px;
     width: 70%;
-}
-
-.contact__content {
-    margin: 7rem 0;
-}
-
-.page__faq .main__title {
-    margin: 40px 0 0;
-    font-size: 20px;
-    color: var(--roxo-principal);
-    text-align: start;
-    align-self: center;
-    width: min(800px, 100%);
 }

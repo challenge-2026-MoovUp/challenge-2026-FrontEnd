@@ -1,8 +1,7 @@
-/* Rodape */
-
+/* Estrutura do rodape */
 .footer {
     align-items: center;
-    background-color: var(--indigo-profundo);
+    background: var(--gradiente-indigo);
     color: #ccc;
     display: flex;
     font-size: .8rem;
@@ -11,25 +10,27 @@
     position: relative;
 }
 
+/* Links do rodape */
 .footer a {
     color: #ccc;
 }
 
-footer a:not(:last-child)::after {
+/* Separador entre links do rodape */
+.footer a:not(:last-child)::after {
     content: "•";
     margin: 0 8px;
 }
 
-/* Logo do rodape */
-
+/* Container da logo do rodape */
 .footer .logo {
-    margin: 20px;
     background: var(--gradiente-branco);
+    margin: 20px;
     -webkit-mask: url("../../images/soulup-logo.png") center / contain no-repeat;
     mask: url("../../images/soulup-logo.png") center / contain no-repeat;
     width: 8rem;
 }
 
+/* Imagem usada como mascara da logo */
 .footer .logo img {
     display: block;
     height: 100%;
@@ -38,8 +39,7 @@ footer a:not(:last-child)::after {
     width: 100%;
 }
 
-/* Links do rodape */
-
+/* Lista central de links do rodape */
 .footer .item {
     display: flex;
     justify-content: center;
@@ -48,8 +48,7 @@ footer a:not(:last-child)::after {
     transform: translateX(-50%);
 }
 
-/* Direitos autorais */
-
+/* Texto de direitos autorais */
 .footer .marca {
     margin: 20px;
     text-align: right;

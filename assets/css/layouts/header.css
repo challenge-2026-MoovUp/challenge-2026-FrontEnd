@@ -1,5 +1,4 @@
-/* Cabecalho */
-
+/* Estrutura do cabecalho */
 .header__content {
     align-items: center;
     border-bottom: 2px solid #ccc;
@@ -7,8 +6,7 @@
     padding: 20px;
 }
 
-/* Navegacao */
-
+/* Lista de links da navegacao */
 .nav {
     display: flex;
     font-size: 15px;
@@ -18,14 +16,27 @@
     word-wrap: normal;
 }
 
+/* Link ativo da navegacao */
 .nav__active {
-    color: var(--indigo);
+    color: var(--indigo-profundo);
+    display: inline-block;
     font-family: 'Sora', sans-serif;
     font-weight: bold;
+    position: relative;
 }
 
-/* Logo */
+/* Linha inferior do link ativo */
+.nav__active::after {
+    background: var(--indigo-profundo);
+    bottom: -6px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
 
+/* Container da logo */
 .header__logo {
     margin: 0;
     padding-top: 2px;
@@ -33,12 +44,14 @@
     width: 10rem;
 }
 
+/* Imagem da logo */
 .header__logo img {
     height: auto;
     width: 100%;
 }
 
-.btn {
+/* Ajuste do botao dentro do cabecalho */
+.header .btn {
     font-size: .8rem;
     padding: 15px 15px;
 }
