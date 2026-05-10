@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/base/import.css">
-    <link rel="icon" type="image/png" href="../assets/images/soulup-icon.png?v=2">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="../assets/images/moov-up-icon.png">
+    <script src="../assets/js/pages/faq.js" defer></script>
     <title>FAQ</title>
 </head>
 <body class="page__faq">
+    <div class="ambient" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
     <header class="header">
         <div class="header__content">
-            <div class="header__logo">
-                <img src="../assets/images/soulup-logo.png" alt="Logo da soulup">
+            <div class="logo">
+                <img src="../assets/images/moov-up-icon.png" alt="Icon MoovUp" class="ico">
+                <p class="name">MoovUp</p>
             </div>
             <nav class="nav">
                 <a href="../index.html">Inicio</a>
@@ -24,139 +29,195 @@
         </div>
     </header>
 
-    <main>
-        <section class="faq__hero">
+    <main id="faq-top">
+        <section class="faq__hero" aria-labelledby="faq-title">
             <div class="container__hero">
                 <div class="hero__content">
-                    <p class="type tag__roxo"><span><i class="fa-solid fa-star"></i></span>Central de Ajuda</p>
-                    <h1 class="faq__title">Perguntas <span>frequentes</span></h1>
-                    <p class="subtitle">Encontre respostas rápidas para tudo sobre a MoovUp</p>
+                    <p class="type tag__roxo">Central de Ajuda</p>
+                    <h1 class="faq__title" id="faq-title">Perguntas <span>frequentes</span></h1>
+                </div>
+                <div class="faq__search">
+                    <label class="faq__label">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="faq__input" id="search" type="search" autocomplete="off" aria-label="Buscar perguntas" placeholder="Buscar perguntas...">
+                    </label>
+                    <p class="faq__counter" id="faq-counter" aria-live="polite"></p>
                 </div>
             </div>
         </section>
 
-        <section class="cards__expand">
-            <div class="container__cards-account">
-                
-                <h2 class="main__title">Conta & Cadastro</h2>
+        <section class="faq__body">
+            <aside class="faq-sidebar">
+                <nav class="faq-sidebar__nav" aria-label="Categorias da FAQ">
+                    <a href="#conta-cadastro" class="faq-sidebar__link">Conta & Cadastro</a>
+                    <a href="#pontos-recompensas" class="faq-sidebar__link">Pontos & Recompensas</a>
+                    <a href="#descontos-energia" class="faq-sidebar__link">Descontos de energia</a>
+                    <a href="#suporte" class="faq-sidebar__link">Suporte</a>
+                </nav>
+            </aside>
 
-                <details class="accordion">
-                    <summary>
-                        <div class="accord-content">
-                            <h3 class="accord-title">Como crio minha conta na MoovUp?</h3>
-                            <p class="accord-subtitle">Basta acessar nosso site ou app, clicar em "Criar conta" e preencher seus dados básicos — nome, e-mail...</p>
+            <section class="faq-sections">
+                <div class="faq-section" id="conta-cadastro">
+                    <div class="faq-section__header">
+                        <div class="faq-section__icon">✦</div>
+                        <div>
+                            <h2 class="faq-section__title">Conta & Cadastro</h2>
+                            <div class="faq-section__count">3 perguntas</div>
                         </div>
-                        <i class="fa-solid fa-angle-up"></i>
-                    </summary>
-                    <div class="accordion-content">
-                        Basta acessar nosso site ou app, clicar em "Criar conta" e preencher seus dados básicos — nome, e-mail e telefone. Após concluir o cadastro, sua conta será ativada automaticamente e você já poderá começar a utilizar todas as funcionalidades da plataforma, acompanhar seu saldo de pontos em tempo real e participar de campanhas exclusivas disponíveis para novos usuários.
                     </div>
-                </details>
-                <details class="accordion">
-                    <summary>
-                        <div class="accord-content">
-                            <h3 class="accord-title">O cadastro é gratuito?</h3>
-                            <p class="accord-subtitle">Sim! O cadastro e o uso das funcionalidades básicas do PontosApp são totalmente gratuitos...</p>
+                    <details class="accordion">
+                        <summary>
+                            <div class="accordion__summary">
+                                <h3 class="accordion__title">Como crio minha conta na MoovUp?</h3>
+                                <p class="accordion__subtitle">Basta acessar nosso site ou app, clicar em "Criar conta" e preencher seus dados básicos — nome, e-mail...</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <div class="accordion__content">
+                            Basta acessar nosso site ou app, clicar em "Criar conta" e preencher seus dados básicos — nome, e-mail e telefone. Após concluir o cadastro, sua conta será ativada automaticamente e você já poderá começar a utilizar todas as funcionalidades da plataforma, acompanhar seu saldo de pontos em tempo real e participar de campanhas exclusivas disponíveis para novos usuários.
                         </div>
-                        <i class="fa-solid fa-angle-up"></i>
-                    </summary>
-                    <div class="accordion-content">
-                        Sim! O cadastro e o uso das funcionalidades básicas do PontosApp são totalmente gratuitos. Você pode acumular pontos, acompanhar recompensas e utilizar os recursos principais sem nenhum custo adicional. Alguns serviços premium poderão ser disponibilizados futuramente, oferecendo vantagens extras e recursos avançados para usuários que desejarem uma experiência ainda mais completa dentro da plataforma.
-                    </div>
-                </details>
-                <details class="accordion">
-                    <summary>
-                        <div class="accord-content">
-                            <h3 class="accord-title">Posso ter mais de uma conta?</h3>
-                            <p class="accord-subtitle">Não. Cada usuário pode possuir apenas uma conta vinculada ao seu CPF, e-mail e número de telefone...</p>
+                    </details>
+                    <details class="accordion">
+                        <summary>
+                            <div class="accordion__summary">
+                                <h3 class="accordion__title">O cadastro é gratuito?</h3>
+                                <p class="accordion__subtitle">Sim! O cadastro e o uso das funcionalidades básicas do PontosApp são totalmente gratuitos...</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <div class="accordion__content">
+                            Sim! O cadastro e o uso das funcionalidades básicas do PontosApp são totalmente gratuitos. Você pode acumular pontos, acompanhar recompensas e utilizar os recursos principais sem nenhum custo adicional. Alguns serviços premium poderão ser disponibilizados futuramente, oferecendo vantagens extras e recursos avançados para usuários que desejarem uma experiência ainda mais completa dentro da plataforma.
                         </div>
-                        <i class="fa-solid fa-angle-up"></i>
-                    </summary>
-                    <div class="accordion-content">
-                        Não. Cada usuário pode possuir apenas uma conta vinculada ao seu CPF, e-mail e número de telefone. Essa medida existe para garantir mais segurança, transparência e evitar fraudes no sistema de pontuação. Caso sejam identificadas contas duplicadas ou atividades suspeitas, o acesso poderá ser temporariamente bloqueado até que a situação seja analisada pela equipe de suporte.
-                    </div>
-                </details>
+                    </details>
+                    <details class="accordion">
+                        <summary>
+                            <div class="accordion__summary">
+                                <h3 class="accordion__title">Posso ter mais de uma conta?</h3>
+                                <p class="accordion__subtitle">Não. Cada usuário pode possuir apenas uma conta vinculada ao seu CPF, e-mail e número de telefone...</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <div class="accordion__content">
+                            Não. Cada usuário pode possuir apenas uma conta vinculada ao seu CPF, e-mail e número de telefone. Essa medida existe para garantir mais segurança, transparência e evitar fraudes no sistema de pontuação. Caso sejam identificadas contas duplicadas ou atividades suspeitas, o acesso poderá ser temporariamente bloqueado até que a situação seja analisada pela equipe de suporte.
+                        </div>
+                    </details>
+                </div>
 
-                <h2 class="main__title">Pontos & Recompensas</h2>
-                
-                <details class="accordion">
-                    <summary>
-                        <div class="accord-content">
-                            <h3 class="accord-title">Como os pontos são calculados?</h3>
-                            <p class="accord-subtitle">Os pontos são calculados com base nas interações realizadas dentro da plataforma...</p>
+                <div class="faq-section" id="pontos-recompensas">
+                    <div class="faq-section__header">
+                        <div class="faq-section__icon">◈</div>
+                        <div>
+                            <h2 class="faq-section__title">Pontos & Recompensas</h2>
+                            <div class="faq-section__count">3 perguntas</div>
                         </div>
-                        <i class="fa-solid fa-angle-up"></i>
-                    </summary>
-                    <div class="accordion-content">
-                        Os pontos são calculados com base nas interações realizadas dentro da plataforma. Curtidas, compartilhamentos, comentários, participação em campanhas e desafios especiais possuem valores específicos em pontuação. Algumas ações promocionais podem oferecer multiplicadores temporários, aumentando a quantidade de pontos recebidos. O usuário pode acompanhar todas as movimentações diretamente pelo painel da conta.
                     </div>
-                </details>
-                <details class="accordion">
-                    <summary>
-                        <div class="accord-content">
-                            <h3 class="accord-title">Os pontos expiram?</h3>
-                            <p class="accord-subtitle">Sim. Os pontos acumulados possuem validade e podem expirar após determinado período sem movimentação...</p>
+                    <details class="accordion">
+                        <summary>
+                            <div class="accordion__summary">
+                                <h3 class="accordion__title">Como os pontos são calculados?</h3>
+                                <p class="accordion__subtitle">Os pontos são calculados com base nas interações realizadas dentro da plataforma...</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <div class="accordion__content">
+                            Os pontos são calculados com base nas interações realizadas dentro da plataforma. Curtidas, compartilhamentos, comentários, participação em campanhas e desafios especiais possuem valores específicos em pontuação. Algumas ações promocionais podem oferecer multiplicadores temporários, aumentando a quantidade de pontos recebidos. O usuário pode acompanhar todas as movimentações diretamente pelo painel da conta.
                         </div>
-                        <i class="fa-solid fa-angle-up"></i>
-                    </summary>
-                    <div class="accordion-content">
-                        Sim. Os pontos acumulados possuem validade e podem expirar após determinado período sem movimentação na conta. Para evitar a perda dos pontos, basta continuar utilizando a plataforma regularmente, realizando interações ou efetuando resgates dentro do prazo informado. O sistema também poderá enviar notificações avisando sobre pontos próximos da expiração.
-                    </div>
-                </details>
-                <details class="accordion">
-                    <summary>
-                        <div class="accord-content">
-                            <h3 class="accord-title">Qual o mínimo de pontos para resgatar?</h3>
-                            <p class="accord-subtitle">O valor mínimo para resgate pode variar conforme a recompensa disponível no momento...</p>
+                    </details>
+                    <details class="accordion">
+                        <summary>
+                            <div class="accordion__summary">
+                                <h3 class="accordion__title">Os pontos expiram?</h3>
+                                <p class="accordion__subtitle">Sim. Os pontos acumulados possuem validade e podem expirar após determinado período sem movimentação...</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <div class="accordion__content">
+                            Sim. Os pontos acumulados possuem validade e podem expirar após determinado período sem movimentação na conta. Para evitar a perda dos pontos, basta continuar utilizando a plataforma regularmente, realizando interações ou efetuando resgates dentro do prazo informado. O sistema também poderá enviar notificações avisando sobre pontos próximos da expiração.
                         </div>
-                        <i class="fa-solid fa-angle-up"></i>
-                    </summary>
-                    <div class="accordion-content">
-                        O valor mínimo para resgate pode variar conforme a recompensa disponível no momento. Em geral, os usuários conseguem iniciar seus resgates a partir de uma quantidade básica de pontos acumulados na plataforma. Quanto maior a pontuação acumulada, maiores poderão ser os benefícios, descontos e vantagens oferecidos dentro das campanhas parceiras.
-                    </div>
-                </details>
+                    </details>
+                    <details class="accordion">
+                        <summary>
+                            <div class="accordion__summary">
+                                <h3 class="accordion__title">Qual o mínimo de pontos para resgatar?</h3>
+                                <p class="accordion__subtitle">O valor mínimo para resgate pode variar conforme a recompensa disponível no momento...</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <div class="accordion__content">
+                            O valor mínimo para resgate pode variar conforme a recompensa disponível no momento. Em geral, os usuários conseguem iniciar seus resgates a partir de uma quantidade básica de pontos acumulados na plataforma. Quanto maior a pontuação acumulada, maiores poderão ser os benefícios, descontos e vantagens oferecidos dentro das campanhas parceiras.
+                        </div>
+                    </details>
+                </div>
 
-                <h2 class="main__title">Desconto de Energia</h2>
-                
-                <details class="accordion">
-                    <summary>
-                        <div class="accord-content">
-                            <h3 class="accord-title">Como funciona o desconto na conta de energia?</h3>
-                            <p class="accord-subtitle">O usuário pode converter os pontos acumulados em créditos para obter descontos na conta de energia elétrica...</p>
+                <div class="faq-section" id="descontos-energia">
+                    <div class="faq-section__header">
+                        <div class="faq-section__icon">⚡</div>
+                        <div>
+                            <h2 class="faq-section__title">Descontos de energia</h2>
+                            <div class="faq-section__count">2 perguntas</div>
                         </div>
-                        <i class="fa-solid fa-angle-up"></i>
-                    </summary>
-                    <div class="accordion-content">
-                        O usuário pode converter os pontos acumulados em créditos para obter descontos na conta de energia elétrica. Para isso, basta informar corretamente os dados da instalação vinculada à concessionária parceira. Após a solicitação, o desconto é processado e aplicado diretamente em uma das próximas faturas, conforme os prazos e regras definidos pela operadora responsável.
                     </div>
-                </details>
-                <details class="accordion">
-                    <summary>
-                        <div class="accord-content">
-                            <h3 class="accord-title">Quais concessionárias são aceitas?</h3>
-                            <p class="accord-subtitle">Atualmente, a plataforma trabalha com diversas concessionárias parceiras distribuídas em diferentes regiões do Brasil...</p>
+                    <details class="accordion">
+                        <summary>
+                            <div class="accordion__summary">
+                                <h3 class="accordion__title">Como funciona o desconto na conta de energia?</h3>
+                                <p class="accordion__subtitle">O usuário pode converter os pontos acumulados em créditos para obter descontos na conta de energia elétrica...</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <div class="accordion__content">
+                            O usuário pode converter os pontos acumulados em créditos para obter descontos na conta de energia elétrica. Para isso, basta informar corretamente os dados da instalação vinculada à concessionária parceira. Após a solicitação, o desconto é processado e aplicado diretamente em uma das próximas faturas, conforme os prazos e regras definidos pela operadora responsável.
                         </div>
-                        <i class="fa-solid fa-angle-up"></i>
-                    </summary>
-                    <div class="accordion-content">
-                        Atualmente, a plataforma trabalha com diversas concessionárias parceiras distribuídas em diferentes regiões do Brasil. A lista de empresas participantes é atualizada constantemente para ampliar a cobertura do serviço e permitir que mais usuários possam utilizar seus pontos em descontos reais na conta de energia elétrica.
-                    </div>
-                </details>
+                    </details>
+                    <details class="accordion">
+                        <summary>
+                            <div class="accordion__summary">
+                                <h3 class="accordion__title">Quais concessionárias são aceitas?</h3>
+                                <p class="accordion__subtitle">Atualmente, a plataforma trabalha com diversas concessionárias parceiras distribuídas em diferentes regiões do Brasil...</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <div class="accordion__content">
+                            Atualmente, a plataforma trabalha com diversas concessionárias parceiras distribuídas em diferentes regiões do Brasil. A lista de empresas participantes é atualizada constantemente para ampliar a cobertura do serviço e permitir que mais usuários possam utilizar seus pontos em descontos reais na conta de energia elétrica.
+                        </div>
+                    </details>
+                </div>
 
-                <h2 class="main__title">Suporte</h2>
-                
-                <details class="accordion">
-                    <summary>
-                        <div class="accord-content">
-                            <h3 class="accord-title">Como entro em contato com o suporte?</h3>
-                            <p class="accord-subtitle">Você pode entrar em contato com nossa equipe de suporte diretamente pelo chat disponível no aplicativo...</p>
+                <div class="faq-section" id="suporte">
+                    <div class="faq-section__header">
+                        <div class="faq-section__icon">❋</div>
+                        <div>
+                            <h2 class="faq-section__title">Suporte</h2>
+                            <div class="faq-section__count">1 pergunta</div>
                         </div>
-                        <i class="fa-solid fa-angle-up"></i>
-                    </summary>
-                    <div class="accordion-content">
-                        Você pode entrar em contato com nossa equipe de suporte diretamente pelo chat disponível no aplicativo, através do <a href="./contato.html">formulário da página de contato</a> ou enviando um e-mail para nossa central de atendimento. Nossa equipe está preparada para auxiliar em dúvidas, problemas técnicos, recuperação de acesso e informações sobre campanhas, pontos e resgates disponíveis na plataforma.
                     </div>
-                </details>
+                    <details class="accordion">
+                        <summary>
+                            <div class="accordion__summary">
+                                <h3 class="accordion__title">Como entro em contato com o suporte?</h3>
+                                <p class="accordion__subtitle">Você pode entrar em contato com nossa equipe de suporte diretamente pelo chat disponível no aplicativo...</p>
+                            </div>
+                            <i class="fa-solid fa-plus"></i>
+                        </summary>
+                        <div class="accordion__content">
+                            Você pode entrar em contato com nossa equipe de suporte diretamente pelo chat disponível no aplicativo, através do <a href="./contato.html">formulário da página de contato</a> ou enviando um e-mail para nossa central de atendimento. Nossa equipe está preparada para auxiliar em dúvidas, problemas técnicos, recuperação de acesso e informações sobre campanhas, pontos e resgates disponíveis na plataforma.
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </section>
+
+        <section class="faq-support" aria-labelledby="faq-support-title">
+            <div class="faq-support__card">
+                <div class="faq-support__content">
+                    <div class="faq-support__eyebrow">AINDA COM DÚVIDAS?</div>
+                    <h2 class="faq-support__title" id="faq-support-title">Fale com nossa <span>equipe</span></h2>
+                    <p class="faq-support__subtitle">Estamos prontos para te ajudar com qualquer questão.</p>
+                </div>
+                <div class="faq-support__actions">
+                    <a href="./contato.html" class="btn faq-support__button faq-support__button--primary">IR PARA CONTATO</a>
+                    <a href="#faq-top" class="btn faq-support__button faq-support__button--outline">VOLTAR AO TOPO</a>
+                </div>
             </div>
         </section>
     </main>
@@ -164,7 +225,8 @@
     <footer>
         <div class="footer">
             <div class="logo">
-                <img src="./assets/images/soulup_logo copiar.png" alt="Logo da soulup">
+                <img src="../assets/images/moov-up-icon.png" alt="Icon MoovUp" class="ico">
+                <p class="name">MoovUp</p>
             </div>
             <div class="item">
                 <a href="#">Privacidade</a>

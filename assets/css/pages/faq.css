@@ -1,77 +1,409 @@
-/* Hero da pagina de FAQ */
-.faq__hero {
-    align-items: center;
-    display: flex;
-    height: 30vh;
-    justify-content: center;
-    margin-top: 6rem;
-    text-align: center;
-}
-
-/* Container interno do hero */
-.page__faq .container__hero {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-/* Conteudo textual do hero */
-.page__faq .hero__content {
-    align-items: center;
+/* Estrutura principal da pagina FAQ: centraliza o conteudo e empilha as secoes */
+.page__faq main {
+    width: 50%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
-    max-width: 900px;
+}
+
+/* Ambiente visual: cria as luzes abstratas fixas atras da pagina */
+.page__faq .ambient {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Luz abstrata base: define formato, blur e movimento das luzes */
+.page__faq .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.45;
+    animation: drift 22s ease-in-out infinite alternate;
+}
+
+/* Primeira luz abstrata: posiciona o brilho roxo no topo esquerdo */
+.page__faq .orb-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(75,63,228,0.55) 0%, transparent 70%);
+    top: -150px;
+    left: -100px;
+}
+
+/* Segunda luz abstrata: posiciona o brilho roxo no fundo direito */
+.page__faq .orb-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #6B3D8A 0%, transparent 80%);
+    top: 700px;
+    left: 1500px;
+}
+
+/* Hero da FAQ: organiza titulo e busca lado a lado */
+.page__faq .container__hero {
+    margin-top: 10rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;  
+}
+
+/* Conteudo textual do hero: empilha etiqueta e titulo */
+.page__faq .hero__content {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    font-size: 4.5rem;
+    max-width: 50%;
+}
+
+/* Titulo principal: deixa "Perguntas" e "frequentes" em linhas separadas */
+.faq__title {
+    font-weight: 100;
+    color: var(--mist);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Destaque do titulo: aplica o estilo visual na palavra em span */
+.faq__title span {
+    display: block;
+    margin-top: 0.25rem;
+    font-style: italic;
+    background: var(--aurora-soft);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Busca da FAQ: empilha input e contador de resultados */
+.faq__search {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Label do input: serve de referencia para posicionar o icone de lupa */
+.faq__label {
+    position: relative;
+    display: block;
+    width: fit-content;
+}
+
+/* Icone de busca: fica dentro do input, sem capturar clique */
+.faq__label i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--border-mid);
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+/* Campo de busca: controla tamanho, cor, borda e espacamento interno */
+.faq__input {
+    width: auto;
+    color: var(--mist);
+    border: 1px solid var(--border-mid);
+    border-radius: 30px;
+    font-family: 'Jost', sans-serif;
+    padding: .9rem 8rem .9rem 2.75rem;
+    background-color: var(--dusk);
+}
+
+/* Estado de foco do input: destaca a busca quando o usuario esta digitando */
+.faq__input:focus {
+    outline: none;
+    background: rgba(180, 130, 255, 0.08);
+    border-color: rgba(180, 130, 255, 0.5);
+    box-shadow: 
+    0 0 20px rgba(180, 130, 255, 0.08),
+    inset 0 0 20px rgba(180, 130, 255, 0.03);
+}
+
+/* Remove o botao padrao de limpar busca no Chrome/Safari */
+.faq__input::-webkit-search-cancel-button {
+    display: none;
+}
+
+/* Contador de resultados: mostra quantas perguntas continuam visiveis */
+.faq__counter {
+    color: var(--mist-dim);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+}
+
+/* Corpo da FAQ: cria o grid com sidebar na esquerda e perguntas na direita */
+.faq__body {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 180px 1fr;
+    margin-top: 4rem;
     width: 100%;
 }
 
-/* Centraliza titulo e subtitulo do hero */
-.page__faq .title,
-.page__faq .subtitle {
-    margin-left: auto;
-    margin-right: auto;
+/* Sidebar fixa: mantem a navegacao de categorias acompanhando a rolagem */
+.faq-sidebar {
+    align-self: start;
+    position: sticky;
+    top: 90px;
 }
 
-/* Titulo das categorias de perguntas */
-.page__faq .main__title {
-    align-self: center;
-    color: var(--roxo-principal);
-    font-size: 20px;
+/* Navegacao da sidebar: empilha os links das categorias */
+.faq-sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Link da sidebar: estilo base de cada categoria clicavel */
+.faq-sidebar__link {
+    align-items: center;
+    color: var(--dust);
+    display: flex;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.4rem;
+    gap: 8px;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+/* Link ativo da sidebar: indica qual secao esta em foco */
+.faq-sidebar__link.is-active {
+    background: var(--aurora-glow); 
+    color: var(--aurora-soft);
+}
+
+/* Marcador do link ativo: adiciona o ponto antes do texto */
+.faq-sidebar__link.is-active::before {
+    align-items: center;
+    content: "•";
+    display: inline-flex;
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* Hover dos links da sidebar: reforca que eles sao clicaveis */
+.faq-sidebar__link:hover {
+    color: var(--aurora);
+}
+
+/* Lista de secoes: empilha os grupos de perguntas com respiro entre eles */
+.faq-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    width: 100%;
+}
+
+/* Secao de perguntas: agrupa titulo da categoria e accordions */
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    scroll-margin-top: 120px;
+    width: 100%;
+}
+
+/* Cabecalho da secao: alinha icone, titulo e quantidade de perguntas */
+.faq-section__header {
+    align-items: flex-end;
+    display: flex;
+    gap: 16px;
+}
+
+/* Icone da secao: cria o quadrado visual antes do titulo */
+.faq-section__icon {
+    font-size: 2rem;
+    align-items: center;
+    background: var(--dusk);
+    border: 1px solid var(--aurora-glow);
+    border-radius: 12px;
+    color: var(--mist);
+    display: flex;
+    flex-shrink: 0;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+}
+
+/* Quantidade da secao: texto pequeno abaixo do titulo da categoria */
+.faq-section__count {
+    color: var(--mist-dim);
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+}
+
+/* Titulo da secao: nome de cada categoria da FAQ */
+.faq-section__title {
+    align-self: flex-start;
+    color: var(--mist);
+    font-size: 2.5rem;
+    font-weight: 100;
     margin: 40px 0 0;
     text-align: start;
     width: min(800px, 100%);
 }
 
-/* Resumo visivel quando o accordion esta fechado */
-.page__faq .accord-subtitle {
-    color: #666;
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 1.6;
-    max-height: 80px;
-    opacity: 1;
-    overflow: hidden;
-    padding: 20px 0 0;
-    transition:
-        max-height 0.3s ease,
-        opacity 0.2s ease,
-        padding 0.3s ease;
+/* Links dentro das respostas: destaca links que aparecem no texto aberto */
+.page__faq .accordion a {
+    font-weight: 900;
 }
 
-/* Esconde o resumo quando o accordion esta aberto */
-.page__faq .accordion[open] .accord-subtitle {
-    max-height: 0;
-    opacity: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+/* Bloco de suporte: chamada final para quem ainda precisa de ajuda */
+.faq-support {
+    margin-top: 10rem;
 }
 
-/* Espacamento do rodape na pagina de FAQ */
+/* Card de suporte: caixa com texto e botoes de acao */
+.faq-support__card {
+    padding: 3rem;
+    box-sizing: border-box;
+    background-color: var(--dusk);
+    color: var(--mist);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* Etiqueta do suporte: texto pequeno acima do titulo */
+.faq-support__eyebrow {
+    color: var(--aurora-soft);
+    font-family: 'Jost', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Titulo do suporte: chamada principal do card final */
+.faq-support__title {
+    width: 70%;
+    font-weight: 300;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Destaque do titulo do suporte: estiliza a palavra em span */
+.faq-support__title span {
+    font-weight: 300;
+    font-style: italic;
+    color: var(--ember-soft);
+}
+
+/* Subtitulo do suporte: frase de apoio abaixo do titulo */
+.faq-support__subtitle {
+    font-weight: 300;
+    color: var(--dust);
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2rem;
+}
+
+/* Acoes do suporte: agrupa os botoes no lado direito */
+.faq-support__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+/* Botao base do suporte: tamanho e tipografia dos CTAs */
+.faq-support__button {
+    margin: 1rem;
+    color: var(--mist);
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    letter-spacing: 0.08em;
+    transition: var(--transition);
+}
+
+/* Botao principal do suporte: leva para a pagina de contato */
+.faq-support__button--primary {
+    background: var(--gradiente);
+}
+
+/* Hover do botao principal: levanta visualmente o botao */
+.faq-support__button--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 36px rgba(166,127,181,0.35);
+}
+
+/* Botao secundario do suporte: volta para o topo da FAQ */
+.faq-support__button--outline {
+    border: 1.5px solid var(--border-mid);
+}
+
+/* Hover do botao secundario: reforca a borda no estado interativo */
+.faq-support__button--outline:hover {
+    color: var(--mist);
+    border-color: rgba(237,232,223,0.22);
+}
+
+/* Rodape na pagina FAQ: adiciona respiro entre suporte e footer */
 .page__faq .footer {
     margin-top: 5rem;
 }
 
-/* Destaque para links dentro dos accordions */
-.page__faq .accordion a {
-    font-weight: 900;
+/* Animacao das luzes: desloca suavemente os brilhos do fundo */
+@keyframes drift {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(40px, -30px, 0);
+    }
+}
+
+/* Responsivo: adapta FAQ para telas menores */
+@media (max-width: 900px) {
+    /* Conteudo principal no mobile: usa mais largura da tela */
+    .page__faq main {
+        width: min(90%, 760px);
+    }
+
+    /* Grid no mobile: sidebar e perguntas viram uma coluna so */
+    .faq__body {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sidebar no mobile: deixa de ser fixa para entrar no fluxo da pagina */
+    .faq-sidebar {
+        position: static;
+    }
+
+    /* Links no mobile: passam a quebrar linha horizontalmente */
+    .faq-sidebar__nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* Card de suporte no mobile: texto e botoes ficam empilhados */
+    .faq-support__card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* Titulo do suporte no mobile: ocupa a largura toda */
+    .faq-support__title {
+        width: 100%;
+    }
+
+    /* Acoes do suporte no mobile: alinham com o inicio do card */
+    .faq-support__actions {
+        justify-content: flex-start;
+        padding: 2rem 0 0;
+    }
 }
