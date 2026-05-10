@@ -1,38 +1,33 @@
-/* Botao base */
-
 .btn {
     font-size: 1rem;
     font-weight: bold;
     justify-items: center;
-    margin-right: 30px;
-    padding: 15px 30px;
     border-radius: 20px;
     text-align: center;
     text-wrap: nowrap;
+    font-family: 'Jost', sans-serif;
 }
 
-/* Botao primario */
-
 .btn__primary {
-    border: 2px solid var(--roxo-principal);
-    background-color: var(--roxo-principal);
-    color: var(--lavanda);
-    transition: var(--transition);
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--aurora-soft);
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 1px solid rgba(166, 127, 181, 0.3);
+    border-radius: 999px;
+    transition: all 0.2s;
 }
 
 .btn__primary:hover {
-    background-color: var(--roxo-escuro);
+    background: rgba(180, 130, 255, 0.08);
+    border-color: rgba(180, 130, 255, 0.5);
+    box-shadow: 
+    0 0 20px rgba(180, 130, 255, 0.08),
+    inset 0 0 20px rgba(180, 130, 255, 0.03);
 }
-
-/* Botao primario no cabecalho */
-
-.header .btn__primary:hover {
-    border: 2px solid var(--indigo-profundo);
-    background-color: transparent;
-    color: var(--indigo-profundo);
-}
-
-/* Botao secundario */
 
 .outline__btn {
     border: 2px solid var(--indigo-profundo);

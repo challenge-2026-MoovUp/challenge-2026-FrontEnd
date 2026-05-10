@@ -1,26 +1,53 @@
 /* Etiqueta base */
 .type {
+    font-weight: 300;
+    font-family: 'Jost', sans-serif;
     border-radius: 30px;
     display: inline-block;
-    font-size: 1.1rem;
-    margin: 0 0 20px;
-    padding: 5px 20px;
+    font-size: 1.6rem;
+    font-style: italic;
 }
 
 /* Etiqueta roxa */
 .tag__roxo {
-    background-color: var(--roxo-opaco);
-    color: var(--roxo-principal);
+    color: var(--aurora-soft);
+    display: inline-flex;
+    align-items: center;
+}
+
+.tag__roxo:before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--aurora);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    animation: breathe 3s ease-in-out infinite;
 }
 
 /* Icone dentro da etiqueta roxa */
 .tag__roxo span {
     color: var(--ambar);
-    margin-right: 5px;
+    margin-right: 0.5rem;
 }
 
 /* Etiqueta ambar */
 .tag__ambar {
     background-color: var(--ambar-opaco);
     color: var(--ambar);
+}
+
+@keyframes breathe {
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
 }
