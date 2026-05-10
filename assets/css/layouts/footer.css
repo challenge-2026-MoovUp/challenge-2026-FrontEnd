@@ -1,55 +1,67 @@
 /* Estrutura do rodape */
 .footer {
     align-items: center;
-    background: var(--gradiente-indigo);
-    color: #ccc;
-    display: flex;
-    font-size: .8rem;
-    font-weight: 50;
-    justify-content: space-between;
-    position: relative;
+    display: grid;
+    font-size: 1.5rem;
+    font-weight: 400;
+    grid-template-columns: 1fr auto 1fr;
+    margin-top: auto;
+    width: 100%;
+    border-top: 1px solid var(--dusk-light);
+    padding: 2rem;
+    color: var(--mist-dim);
 }
 
-/* Links do rodape */
 .footer a {
-    color: #ccc;
+    font-weight: 500;
+    color: var(--mist-dim);
+    font-family: 'Jost', sans-serif;
 }
 
 /* Separador entre links do rodape */
 .footer a:not(:last-child)::after {
+    align-items: center;
     content: "•";
-    margin: 0 8px;
+    display: inline-flex;
+    font-size: 2.2rem;
+    line-height: 1;
+    margin: 0 12px;
 }
 
 /* Container da logo do rodape */
 .footer .logo {
-    background: var(--gradiente-branco);
-    margin: 20px;
-    -webkit-mask: url("../../images/soulup-logo.png") center / contain no-repeat;
-    mask: url("../../images/soulup-logo.png") center / contain no-repeat;
-    width: 8rem;
+    display: flex;
+    justify-self: start;
+    width: 10rem;
 }
 
-/* Imagem usada como mascara da logo */
-.footer .logo img {
-    display: block;
-    height: 100%;
-    margin: 0;
-    opacity: 0;
-    width: 100%;
+.footer .logo .ico {
+    height: auto;
+    width: 25%;
+}
+
+.footer .logo .name {
+    align-self: center;
+    color: var(--mist-dim);
+    font-size: 1.5rem;
+    padding-left: 15px;
 }
 
 /* Lista central de links do rodape */
 .footer .item {
+    align-items: center;
     display: flex;
+    justify-self: center;
     justify-content: center;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
+}
+
+.footer .item a {
+    align-items: center;
+    display: inline-flex;
 }
 
 /* Texto de direitos autorais */
 .footer .marca {
-    margin: 20px;
+    justify-self: end;
     text-align: right;
 }
