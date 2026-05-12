@@ -1,21 +1,16 @@
-/* Etiqueta base */
-.type {
+/* Etiqueta reutilizavel */
+.section-tag {
+    align-items: center;
+    color: var(--aurora-soft);
+    display: inline-flex;
     font-weight: 300;
     font-family: 'Jost', sans-serif;
     border-radius: 30px;
-    display: inline-block;
     font-size: 1.6rem;
     font-style: italic;
 }
 
-/* Etiqueta roxa */
-.tag__roxo {
-    color: var(--aurora-soft);
-    display: inline-flex;
-    align-items: center;
-}
-
-.tag__roxo:before {
+.section-tag::before {
     content: "";
     display: inline-block;
     width: 6px;
@@ -27,17 +22,12 @@
     animation: breathe 3s ease-in-out infinite;
 }
 
-/* Icone dentro da etiqueta roxa */
-.tag__roxo span {
+/* Icone dentro da etiqueta */
+.section-tag span {
     color: var(--ambar);
     margin-right: 0.5rem;
 }
 
-/* Etiqueta ambar */
-.tag__ambar {
-    background-color: var(--ambar-opaco);
-    color: var(--ambar);
-}
 
 @keyframes breathe {
     0%,

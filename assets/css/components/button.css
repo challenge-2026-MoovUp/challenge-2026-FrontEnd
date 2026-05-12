@@ -1,4 +1,5 @@
 .btn {
+    display: flex;
     font-size: 1rem;
     font-weight: bold;
     justify-items: center;
@@ -36,4 +37,34 @@
 
 .outline__btn:hover {
     box-shadow: 0 4px 12px var(--roxo-opaco);
+}
+
+/* Botao reutilizavel para chamadas de acao */
+.btn__cta {
+    margin: 1rem;
+    color: var(--mist);
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    letter-spacing: 0.08em;
+    transition: var(--transition);
+}
+
+.btn__cta--primary {
+    background: var(--gradiente);
+}
+
+.btn__cta--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 36px rgba(166,127,181,0.35);
+}
+
+.btn__cta--outline {
+    border: 1.5px solid var(--border-mid);
+}
+
+.btn__cta--outline:hover {
+    color: var(--mist);
+    border-color: rgba(237,232,223,0.22);
 }
