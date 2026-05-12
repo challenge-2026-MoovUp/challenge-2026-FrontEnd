@@ -1,21 +1,24 @@
 /* Titulo principal reutilizavel */
 .title {
-    font-size: 3rem;
-    width: 90%;
+    font-size: 7rem;
+    width: 100%;
+}
+
+.feat__container .title {
+    font-size: 6rem;
+    width: 60%;
 }
 
 /* Subtitulo claro dentro de heros */
 .hero__content .subtitle {
-    color: #616161;
-    font-size: 1.3rem;
-    margin: 50px 0 60px;
-    width: 70%;
+    margin: 20px 0;
+    color: var(--dust);
+    width: 80%;
 }
 
 /* Subtitulo escuro dentro de heros */
 .hero__content .dark__subtitle {
     color: #cccccc;
-    font-size: 1.3rem;
     margin: 50px 0 60px;
     width: 70%;
 }
