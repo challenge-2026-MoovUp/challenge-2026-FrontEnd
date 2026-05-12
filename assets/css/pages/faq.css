@@ -24,20 +24,20 @@
     animation: drift 22s ease-in-out infinite alternate;
 }
 
-/* Primeira luz abstrata: posiciona o brilho roxo no topo esquerdo */
+/* Primeira luz abstrata: posiciona o brilho verde no topo esquerdo */
 .page__faq .orb-1 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(75,63,228,0.55) 0%, transparent 70%);
+    background: radial-gradient(circle, var(--sage) 0%, transparent 70%);
     top: -150px;
     left: -100px;
 }
 
-/* Segunda luz abstrata: posiciona o brilho roxo no fundo direito */
+/* Segunda luz abstrata: posiciona o brilho quente no fundo direito */
 .page__faq .orb-2 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, #6B3D8A 0%, transparent 80%);
+    background: radial-gradient(circle, var(--ember-soft) 0%, transparent 80%);
     top: 700px;
     left: 1500px;
 }
@@ -315,40 +315,6 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     padding: 2rem;
-}
-
-/* Botao base do suporte: tamanho e tipografia dos CTAs */
-.faq-support__button {
-    margin: 1rem;
-    color: var(--mist);
-    font-weight: 500;
-    font-size: 1.3rem;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    letter-spacing: 0.08em;
-    transition: var(--transition);
-}
-
-/* Botao principal do suporte: leva para a pagina de contato */
-.faq-support__button--primary {
-    background: var(--gradiente);
-}
-
-/* Hover do botao principal: levanta visualmente o botao */
-.faq-support__button--primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 36px rgba(166,127,181,0.35);
-}
-
-/* Botao secundario do suporte: volta para o topo da FAQ */
-.faq-support__button--outline {
-    border: 1.5px solid var(--border-mid);
-}
-
-/* Hover do botao secundario: reforca a borda no estado interativo */
-.faq-support__button--outline:hover {
-    color: var(--mist);
-    border-color: rgba(237,232,223,0.22);
 }
 
 /* Rodape na pagina FAQ: adiciona respiro entre suporte e footer */

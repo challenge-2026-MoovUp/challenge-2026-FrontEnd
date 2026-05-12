@@ -1,115 +1,123 @@
-/* Secao hero da home */
-.page__home .main__hero {
-    align-items: center;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 50px;
-    justify-content: space-between;
-}
-
-/* Container interno do hero */
-.page__home .container__hero {
-    align-items: flex-start;
-    display: flex;
-    gap: 4rem;
-    justify-content: space-between;
-    margin: 7rem 7rem 0;
-    width: 80%;
-}
-
-/* Conteudo textual do hero */
-.page__home .hero__content {
-    width: 60%;
-}
-
-/* Grupo de botoes do hero */
-.page__home .hero__actions {
-    align-items: center;
-    display: flex;
-    gap: 30px;
-    word-wrap:normal;
-}
-
-/* Botao dentro das acoes do hero */
-.page__home .hero__actions .btn {
-    margin-right: 0;
-    white-space: nowrap;
-}
-
-/* Destaque em gradiente no titulo */
-.page__home .title span {
-    background: var(--gradiente-roxo);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Subtitulo da home */
-.page__home .subtitle {
-    color: #616161;
-    font-size: 1.3rem;
-    margin: 50px 0 60px;
+.page__home main {
     width: 70%;
-}
-
-/* Container da imagem do aplicativo */
-.page__home .phone {
-    align-items: flex-start;
-    display: flex;
-    justify-content: start;
-    margin: 0;
-    order: 1;
-    transform: translateY(-4rem);
-    width: auto;
-}
-
-/* Imagem do smartphone */
-.page__home .phone img {
-    filter: drop-shadow(0 40px 80px var(--roxo-opaco));
-    height: auto;
-    width: 300px;
-}
-
-/* Container da secao de recursos */
-.feat__container {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ambiente visual: cria as luzes abstratas fixas atras da pagina */
+.page__home .ambient {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Luz abstrata base: define formato, blur e movimento das luzes */
+.page__home .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.45;
+    animation: drift 22s ease-in-out infinite alternate;
+}
+
+/* Primeira luz abstrata: posiciona o brilho roxo no topo esquerdo */
+.page__home .orb-1 {
+    width: 500px;
+    height: 700px;
+    background: radial-gradient(circle, var(--aurora) 0%, transparent 70%);
+    top: -150px;
+    left: -100px;
+}
+
+/* Segunda luz abstrata: posiciona o brilho roxo no fundo direito */
+.page__home .orb-2 {
+    width: 500px;
+    height: 100px;
+    background: radial-gradient(circle, var(--ember) 0%, transparent 100%);
+    right: -120px;
+    bottom: 40px;
+}
+
+.page__home .container__hero {
+    display: flex;
+    flex-direction: row;
+    margin: 10rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__home .hero__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     width: 80%;
 }
 
-/* Titulo da secao de recursos */
-.page__home .feat__title {
-    color: var(--lavanda);
-    font-size: 3rem;
-    width: 50%;
+.page__home .section-tag {
+    font-style: normal;
+    color: var(--ember);
 }
 
-/* Destaque do titulo de recursos */
-.page__home .feat__title span {
-    color: var(--ambar);
+.page__home .section-tag::before {
+    width: 5px;
+    height: 5px;
+    background: var(--ember);
+    animation-duration: 4s;
 }
 
-/* Texto dos cards de recursos */
-.page__home .feature .about {
-    color: #ccc;
-    font-size: .8rem;
+.page__home .title {
+    color: var(--mist);
+    font-weight: 200;
+}
+
+.page__home .title span {
+    color: var(--aurora-soft);
+    font-style: italic;
     font-weight: 100;
-    padding: 30px 0;
 }
 
-/* Cor do primeiro icone de recurso */
-.page__home .icon1 { background-color: var(--azul-opaco); }
 
-/* Cor do segundo icone de recurso */
-.page__home .icon2 { background-color: var(--ambar-opaco); }
+.page__home .subtitle {
+    font-weight: 100;
+    font-size: 1.5rem;
+}
 
-/* Cor do terceiro icone de recurso */
-.page__home .icon3 { background-color: var(--roxo-mais-opaco); }
+.page__home .hero__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 
-/* Cor do quarto icone de recurso */
-.page__home .icon4 { background-color: var(--verde-opaco); }
+.page__home .btn__cta {
+    font-weight: 200;
+    font-size: 1.6rem;
+    margin: 0;
+    width: fit-content;
+}
 
-/* Cor do quinto icone de recurso */
-.page__home .icon5 { background-color: var(--vermelho-opaco); }
+.feature .topic{
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: var(--mist);
+}
 
-/* Cor do sexto icone de recurso */
-.page__home .icon6 { background-color: var(--azul-pastel-opaco); }
+.feature .about {
+    font-family: 'Jost', sans-serif;
+    padding-top: 10px;
+    color: var(--mist-dim);
+    font-weight: 100;
+    font-size: 1.3rem;
+}
+
+.steps__section .section-tag {
+    font-size: 1.7rem;
+}
+
+.steps__section .title {
+    font-size: 5.8rem;
+}

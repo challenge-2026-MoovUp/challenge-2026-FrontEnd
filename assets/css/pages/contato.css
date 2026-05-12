@@ -4,8 +4,8 @@
     color: var(--lavanda);
     align-items: center;
     display: flex;
-    height: 50vh;
     justify-content: center;
+    min-height: 50vh;
     text-align: center;
 }
 
@@ -33,7 +33,7 @@
 }
 
 /* Ajusta a cor da etiqueta no hero */
-.page__contato .tag__roxo {
+.page__contato .section-tag {
     color: var(--lavanda);
 }
 
