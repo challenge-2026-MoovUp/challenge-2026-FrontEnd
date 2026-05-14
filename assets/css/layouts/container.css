@@ -8,18 +8,3 @@
     font-size: 6rem;
     width: 60%;
 }
-
-/* Subtitulo claro dentro de heros */
-.hero__content .subtitle {
-    margin: 20px 0;
-    color: var(--dust);
-    width: 80%;
-}
-
-/* Subtitulo escuro dentro de heros */
-.hero__content .dark__subtitle {
-    color: #cccccc;
-    margin: 50px 0 60px;
-    width: 70%;
-}
-

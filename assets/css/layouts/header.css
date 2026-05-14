@@ -52,13 +52,28 @@
 
 /* Linha inferior do link ativo */
 .nav__active::after {
-    background: var(--indigo-profundo);
+    animation: navActiveLoad .45s ease forwards;
+    background: var(--aurora);
     bottom: -6px;
     content: "";
     height: 2px;
-    left: 0;
+    left: 50%;
     position: absolute;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
     width: 100%;
+}
+
+@keyframes navActiveLoad {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) scaleX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) scaleX(1);
+    }
 }
 
 /* Container da logo */
@@ -78,28 +93,4 @@
     font-size: 1.5rem;
     padding-left: 15px;
     align-self: center;
-}
-
-@media (max-width: 562px) {
-    .header__content {
-        gap: 12px;
-        padding: 14px 16px;
-    }
-
-    .logo {
-        width: 8rem;
-    }
-
-    .nav {
-        flex: 1;
-        font-size: 10px;
-        gap: 10px;
-        width: auto;
-    }
-
-    .header .btn__primary {
-        font-size: 10px;
-        letter-spacing: 0.02em;
-        padding: 6px 10px;
-    }
 }

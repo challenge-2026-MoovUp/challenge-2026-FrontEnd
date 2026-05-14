@@ -80,12 +80,3 @@
     justify-self: end;
     text-align: right;
 }
-
-@media (max-width: 562px) {
-    .footer {
-        flex: 1;
-        font-size: 10px;
-        gap: 10px;
-        width: auto;
-    }
-}
