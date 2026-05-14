@@ -1,157 +1,361 @@
-/* Hero da pagina de contato */
-.contact__hero {
-    background: var(--gradiente-roxo-escuro);
-    color: var(--lavanda);
+.page__contato .ambient {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Luz abstrata base: define formato, blur e movimento das luzes */
+.page__contato .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.45;
+    animation: drift 22s ease-in-out infinite alternate;
+}
+
+/* Primeira luz abstrata: posiciona o brilho roxo no topo esquerdo */
+.page__contato .orb-1 {
+    width: 500px;
+    height: 700px;
+    background: radial-gradient(circle, var(--aurora) 0%, transparent 70%);
+    top: -150px;
+    left: -100px;
+}
+
+/* Segunda luz abstrata: posiciona o brilho roxo no fundo direito */
+.page__contato .orb-2 {
+    width: 500px;
+    height: 100px;
+    background: radial-gradient(circle, var(--ember) 0%, transparent 100%);
+    right: -120px;
+    bottom: 40px;
+}
+
+
+.page__contato .contact__hero {
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 50vh;
-    text-align: center;
+    margin-inline: auto;
+    min-height: 52vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
-/* Container interno do hero */
+.contact__title {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    color: var(--mist-dim);
+    margin-bottom: 30px;
+}
+
 .page__contato .container__hero {
+    align-items: center;
     display: flex;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
+    margin-inline: auto;
+    max-width: 1020px;
+    min-height: 360px;
+    width: 78%;
 }
 
-/* Conteudo textual do hero */
 .page__contato .hero__content {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 900px;
-    width: 100%;
-}
-
-/* Centraliza titulo e subtitulo do hero */
-.page__contato .title,
-.page__contato .dark__subtitle {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Ajusta a cor da etiqueta no hero */
-.page__contato .section-tag {
-    color: var(--lavanda);
-}
-
-/* Secao principal de contato */
-.contact__content {
-    display: flex;
-    justify-content: space-around;
-    margin: 7rem 0;
-}
-
-/* Card com informacao de contato */
-.contact__card {
-    background-color: #fff;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    margin: 2rem 0;
-    padding: 1rem;
-}
-
-/* Icone dos cards de contato */
-.contact__card-icon {
-    align-items: center;
-    background-color: var(--azul-opaco);
-    border-radius: 10px;
-    display: flex;
-    font-size: 1.5rem;
-    justify-content: flex-start;
-    margin: 0 20px;
-    padding: 0 10px;
-}
-
-/* Texto dos cards de contato */
-.contact__card-text {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding-right: 5rem;
-}
-
-/* Formulario de contato */
-.contact__form {
     align-items: flex-start;
-    background-color: #fff;
-    border: 1px solid rgba(108, 98, 240, 0.18);
-    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 22px;
-    justify-content: flex-start;
-    max-width: 640px;
-    padding: 40px;
+    max-width: 560px;
+    text-align: left;
+    width: 58%;
+}
+
+.page__contato .hero__content .section-tag {
+    color: var(--ember-soft);
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    margin-bottom: 3.2rem;
+    text-transform: uppercase;
+}
+
+.page__contato .hero__content .title {
+    color: var(--mist);
+    font-size: 7.6rem;
+    font-weight: 200;
+    line-height: 0.95;
+    margin: 0;
+}
+
+.page__contato .hero__content .title span {
+    background: var(--gradiente-aurora);
+    background-clip: text;
+    display: block;
+    font-style: italic;
+    font-weight: 100;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page__contato .hero__content .subtitle {
+    color: var(--dust);
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-top: 1.8rem;
+    max-width: 500px;
+}
+
+.contact__status {
+    align-items: center;
+    align-self: flex-end;
+    background: rgba(26, 22, 38, 0.72);
+    border: 1px solid rgba(166, 127, 181, 0.26);
+    border-radius: 14px;
+    color: var(--mist);
+    display: flex;
+    gap: 12px;
+    margin-bottom: 6.8rem;
+    padding: 16px 18px;
+    width: 174px;
+}
+
+.contact__status-dot {
+    background: var(--sage);
+    border-radius: 50%;
+    box-shadow: 0 0 14px rgba(122, 158, 138, 0.45);
+    flex: 0 0 auto;
+    height: 8px;
+    opacity: 0.75;
+    width: 8px;
+}
+
+.contact__status strong {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.contact__status p {
+    color: var(--mist-dim);
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-top: 6px;
+}
+
+.page__contato .accordion__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
 }
 
-/* Titulo do formulario */
-.contact__form-title {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+.page__contato .accordion {
+    flex: 1 1 0;
+    max-width: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
 }
 
-/* Linha com campos lado a lado */
+.page__contato .accordion a {
+    align-items: center;
+    color: var(--mist);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    gap: 8px;
+    height: 100%;
+    justify-content: center;
+    min-height: 92px;
+    padding: 14px;
+    width: 100%;
+}
+
+.page__contato .accordion span {
+    overflow-wrap: anywhere;
+}
+
+.page__contato .accordion i {
+    color: var(--aurora-soft);
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+.contact__form-title {
+    font-size: 4rem;
+    color: var(--mist);
+    font-weight: 300;
+}
+
+.contact__form-subtitle {
+    color: var(--dust);
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
 .contact__form-row {
     display: flex;
     gap: 20px;
+}
+
+.form__item .contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0;
+    max-width: none;
+    padding: 30px;
     width: 100%;
 }
 
-/* Campo dentro da linha do formulario */
-.contact__form-row .contact__label {
+.form__item .contact__label {
+    display: flex;
+    flex-direction: column;
     flex: 1;
+    gap: 6px;
 }
 
-/* Placeholder dos campos */
-.contact__label ::placeholder {
-    color: #757575;
-    font-weight: 200;
-}
-
-/* Rotulo dos campos */
-.contact__label {
-    font-weight: 800;
-    width: 100%;
-}
-
-/* Campos do formulario */
 .contact__input,
-.contact__select,
 .contact__textarea {
-    background-color: var(--lavanda);
-    border: 1px solid rgba(108, 98, 240, 0.2);
-    border-radius: 12px;
-    color: var(--indigo-profundo);
-    font: inherit;
-    padding: 14px 18px;
+    background: var(--void);
+    border: 1px solid var(--border-mid);
+    border-radius: 10px;
+    padding: 13px 16px;
+    color: var(--mist);
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    outline: none;
+    transition: var(--transition);
     width: 100%;
 }
 
-/* Campo de selecao */
 .contact__select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231a1240' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-    background-position: right 22px center;
-    background-repeat: no-repeat;
-    color: #757575;
-    font-weight: 200;
-    padding-right: 54px;
+    position: relative;
+    width: 100%;
 }
 
-/* Area de texto */
 .contact__textarea {
-    height: 150px;
+    min-height: 140px;
     resize: none;
 }
 
-/* Botao de envio */
-.contact__btn {
-    border-radius: 12px;
-    margin: 16px 0 0;
+.contact__select-trigger {
+    align-items: center;
+    background: var(--void);
+    border: 1px solid var(--border-mid);
+    border-radius: 10px;
+    color: #6f6f6e;
+    cursor: pointer;
+    display: flex;
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 300;
+    justify-content: space-between;
+    letter-spacing: 0.01em;
+    outline: none;
+    padding: 13px 16px;
+    text-align: left;
+    transition: var(--transition);
     width: 100%;
+}
+
+.contact__select-trigger::after {
+    color: var(--mist-dim);
+    content: "⌄";
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.contact__options {
+    background: var(--void);
+    border: 1px solid var(--border-mid);
+    border-radius: 10px;
+    display: none;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 6px);
+    z-index: 20;
+}
+
+.contact__select.is-open .contact__options {
+    display: block;
+}
+
+.contact__options button {
+    background: transparent;
+    border: 0;
+    color: var(--mist);
+    cursor: pointer;
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    padding: 12px 16px;
+    text-align: left;
+    width: 100%;
+}
+
+.contact__options button:hover,
+.contact__options button[aria-selected="true"] {
+    background: rgba(237, 232, 223, 0.08);
+}
+
+.contact__form label,
+.contact__label > span {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--dust)
+}
+
+.form__item .btn {
+    align-items: center;
+    align-self: center;
+    background: var(--gradiente-aurora);
+    border-color: rgba(201, 174, 216, 0.35);
+    box-shadow: 0 14px 32px rgba(166, 127, 181, 0.18);
+    color: var(--mist);
+    gap: 8px;
+    justify-content: center;
+    min-height: 56px;
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    width: 100%;
+}
+
+.form__item .btn span {
+    font-family: var(--font-sans);
+    
+}
+
+.contact__btn-arrow {
+    display: inline-block;
+    transition: transform .2s ease;
+}
+
+.form__item .btn:hover {
+    box-shadow: 0 18px 42px rgba(166, 127, 181, 0.28);
+    filter: saturate(1.08);
+    transform: translateY(-3px);
+}
+
+.form__item .btn:hover .contact__btn-arrow {
+    transform: translateX(6px);
+}
+
+
+.page__contato .section-tag::before {
+    background: var(--ember);
 }

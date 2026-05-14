@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/base/import.css">
     <link rel="icon" type="image/png" href="../assets/images/moov-up-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../assets/js/pages/contato.js" defer></script>
     <title>Contato</title>
 </head>
 <body class="page__contato">
+    <div class="ambient" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
     <header class="header">
         <div class="header__content">
             <div class="logo">
@@ -29,77 +35,115 @@
         <section class="contact__hero">
             <div class="container__hero">
                 <div class="hero__content">
-                    <p class="section-tag"><span aria-hidden="true">✦</span>Fale conosco</p>
-                    <h1 class="title">Estamos aqui para ajudar</h1>
-                    <p class="dark__subtitle">Tem alguma dúvida, sugestão ou problema? Nossa equipe responde em até 24 horas.</p>
+                    <p class="section-tag">Fale conosco</p>
+                    <h1 class="title">Estamos aqui <span>para ajudar</span></h1>
+                    <p class="subtitle">Tem alguma dúvida, sugestão ou problema? Nossa equipe responde em até 24 horas.</p>
+                </div>
+                <div class="contact__status">
+                    <span class="contact__status-dot"></span>
+                    <div>
+                        <strong>Equipe online</strong>
+                        <p>Seg–Sex, 09h às 18h</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="contact__content">
             <div class="contact__info">
-                <h2 class="contact__title">Informações de contato</h2>
-                <p class="contact__subtitle">Escolha o canal que preferir para nos contatar.</p>
+                <h2 class="contact__title">CANAIS DE ATENDIMENTO</h2>
                 <div class="contact__info-cards">
                     <div class="contact__card">
-                        <div class="contact__card-icon">✦</div>
+                        <div class="icon contact__card-icon">📧</div>
                         <div class="contact__card-text">
                             <h3 class="contact__card-label">E-mail</h3>
                             <p class="contact__card-value">contato@pontosapp.com.br</p>
                         </div>
                     </div>
                     <div class="contact__card">
-                        <div class="contact__card-icon">✦</div>
+                        <div class="icon contact__card-icon">📞</div>
                         <div class="contact__card-text">
                             <h3 class="contact__card-label">WhatsApp</h3>
                             <p class="contact__card-value">+55 (11) 99999-0000</p>
                         </div>
                     </div>
                     <div class="contact__card">
-                        <div class="contact__card-icon">✦</div>
+                        <div class="icon contact__card-icon">⏱️</div>
                         <div class="contact__card-text">
                             <h3 class="contact__card-label">Horário de atendimento</h3>
                             <p class="contact__card-value">Seg–Sex, 09h às 18h</p>
                         </div>
                     </div>
                     <div class="contact__card">
-                        <div class="contact__card-icon">✦</div>
+                        <div class="icon contact__card-icon">📍</div>
                         <div class="contact__card-text">
                             <h3 class="contact__card-label">Endereço</h3>
                             <address class="contact__card-value">Av. Paulista, 1000 – São Paulo, SP</address>
                         </div>
                     </div>
+                    <div class="accordion__flex">
+                        <div class="accordion">
+                            <a href="https://x.com/soulupoficial?s=20" aria-label="Twitter">
+                                <i class="fa-brands fa-square-x-twitter"></i>
+                                <span>TWITTER</span>
+                            </a>
+                        </div>
+                        <div class="accordion">
+                            <a href="https://www.instagram.com/soulupoficial/" aria-label="Instagram">
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <span>INSTAGRAM</span>
+                            </a>
+                        </div>
+                        <div class="accordion">
+                            <a href="https://www.linkedin.com/company/soulupoficial/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fa-brands fa-square-linkedin"></i>
+                                <span>LINKEDIN</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="contact__form">
-                <h2 class="contact__form-title">Enviar mensagem</h2>
-                <div class="contact__form-row">
+            <div class="form__item">
+                <div class="contact__form">
+                    <h2 class="contact__form-title">Enviar mensagem</h2>
+                    <p class="contact__form-subtitle">Preencha o formulário e retornaremos em breve.</p>
+                    <div class="contact__form-row">
+                        <label class="contact__label">
+                            <span>NOME</span>
+                            <input class="contact__input" id="name" type="text" placeholder="Seu nome completo">
+                        </label>
+                        <label class="contact__label">
+                            <span>EMAIL</span>
+                            <input class="contact__input" id="email" type="email" placeholder="seu@email.com">
+                        </label>
+                    </div>
+                    <div class="contact__label contact__label--select">
+                        <span>ASSUNTO</span>
+                        <input type="hidden" name="subject" value="Problema com pontos">
+                        <div class="contact__select" data-select>
+                            <button class="contact__select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+                                <span data-select-value>Problema com pontos</span>
+                            </button>
+                            <div class="contact__options" role="listbox">
+                                <button type="button" role="option" aria-selected="true" data-value="Problema com pontos">Problema com pontos</button>
+                                <button type="button" role="option" data-value="Dúvida sobre resgate">Dúvida sobre resgate</button>
+                                <button type="button" role="option" data-value="Sugestão">Sugestão</button>
+                                <button type="button" role="option" data-value="Outro">Outro</button>
+                            </div>
+                        </div>
+                    </div>
+                
                     <label class="contact__label">
-                        <p>Nome</p>
-                        <input class="contact__input" id="name" type="text" placeholder="Seu nome completo">
+                        <span>MENSAGEM</span>
+                        <textarea class="contact__textarea" id="text" placeholder="Descreva sua dúvida ou problema com detalhes..."></textarea>
                     </label>
-                    <label class="contact__label">
-                        <label for="email">E-mail</label>
-                        <input class="contact__input" id="email" type="email" placeholder="seu@email.com">
-                    </label>
+                
+                    <button class="btn btn__primary contact__btn">
+                        <span>Enviar mensagem</span>
+                        <span class="contact__btn-arrow">→</span>
+                    </button>
                 </div>
-                <label class="contact__label">
-                    <p>Assunto</p>
-                    <select class="contact__select">
-                        <option class="placeholder">Problema com pontos</option>
-                        <option class="placeholder">Dúvida sobre resgate</option>
-                        <option class="placeholder">Sugestão</option>
-                        <option class="placeholder">Outro</option>
-                    </select>
-                </label>
-            
-                <label class="contact__label">
-                    <label for="text" >Mensagem</label>
-                    <textarea class="contact__textarea" id="text" placeholder="Descreva sua dúvida ou problema com detalhes..."></textarea>
-                </label>
-            
-                <button class="btn btn__primary contact__btn">Enviar mensagem →</button>
             </div>
         </section>
     </main>
