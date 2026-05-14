@@ -75,7 +75,7 @@
     display: block;
     margin-top: 0.25rem;
     font-style: italic;
-    background: var(--aurora-soft);
+    background: var(--gradiente-aurora);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -330,67 +330,5 @@
 
     to {
         transform: translate3d(40px, -30px, 0);
-    }
-}
-
-/* Responsivo: adapta FAQ para telas menores */
-@media (max-width: 900px) {
-    /* Conteudo principal no mobile: usa mais largura da tela */
-    .page__faq main {
-        width: min(90%, 760px);
-    }
-
-    /* Grid no mobile: sidebar e perguntas viram uma coluna so */
-    .faq__body {
-        grid-template-columns: 1fr;
-    }
-
-    /* Sidebar no mobile: deixa de ser fixa para entrar no fluxo da pagina */
-    .faq-sidebar {
-        position: static;
-    }
-
-    /* Links no mobile: passam a quebrar linha horizontalmente */
-    .faq-sidebar__nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    /* Card de suporte no mobile: texto e botoes ficam empilhados */
-    .faq-support__card {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    /* Titulo do suporte no mobile: ocupa a largura toda */
-    .faq-support__title {
-        width: 100%;
-    }
-
-    /* Acoes do suporte no mobile: alinham com o inicio do card */
-    .faq-support__actions {
-        justify-content: flex-start;
-        padding: 2rem 0 0;
-    }
-}
-
-
-@media (max-width: 1271px) {
-    .page__faq main {
-        width: 80%;
-    }
-}
-
-@media (max-width: 697px) {
-    .page__faq .container__hero {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .faq__label {
-        margin-top: 30px;
-    }
-
-    .faq__title {
-        font-size: 8rem;
     }
 }
