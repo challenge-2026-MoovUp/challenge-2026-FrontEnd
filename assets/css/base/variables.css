@@ -46,7 +46,8 @@
     --dust: #8C8278;
     --aurora: #A67FB5;
     --aurora-soft: #C9AED8;
-    --aurora-glow: rgba(166, 127, 181, 0.12);
+    --aurora-glow: rgba(166 , 127, 181, 0.12);
+    --gradiente-aurora: linear-gradient(135deg, #A67FB5, #C97B5A);
     --ember: #C97B5A;
     --ember-soft: #E0A080;
     --gold: #D4A96A;
