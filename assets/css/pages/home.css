@@ -58,7 +58,8 @@
 }
 
 .page__home .section-tag {
-    font-style: normal;
+    font-size: 1.5rem;
+    font-style: italic;
     color: var(--ember);
 }
 
@@ -72,18 +73,23 @@
 .page__home .title {
     color: var(--mist);
     font-weight: 200;
+    margin-bottom: 30px;
 }
 
 .page__home .title span {
-    color: var(--aurora-soft);
+    background: var(--gradiente-aurora);
+    background-clip: text;
     font-style: italic;
     font-weight: 100;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-
 .page__home .subtitle {
+    color: var(--mist-dim);
+    font-family: var(--font-sans);
     font-weight: 100;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .page__home .hero__actions {
@@ -116,6 +122,14 @@
 
 .steps__section .section-tag {
     font-size: 1.7rem;
+}
+
+.container__foot .section-tag {
+    color: var(--aurora)
+}
+
+.page__home .container__foot .section-tag::before {
+    background: var(--aurora);
 }
 
 .steps__section .title {
