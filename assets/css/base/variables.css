@@ -1,0 +1,62 @@
+/* Variaveis globais */
+
+:root {
+    /* Gradientes */
+    --gradiente-branco: linear-gradient(to right, #f7f6ff, #a8c8e8);
+    --gradiente-roxo: linear-gradient(to right, #4b3fe4, rgba(108, 98, 240, 0.8));
+    --gradiente-roxo-escuro: linear-gradient(to right, #4b3fe4, rgba(25, 23, 59, 1));
+    --gradiente-indigo: linear-gradient(to right, #0b081e, #0E0C14);
+    --gradiente: linear-gradient(135deg, var(--aurora), var(--ember));
+    
+    /* Cores principais */
+    --aurora-soft: #C9AED8;
+    --aurora: #A67FB5;
+    --ember: #C97B5A;
+    --ambar: #F5B842;
+    --indigo-profundo: #0E0C14;
+    --lavanda: #EDE8DF;
+    --roxo-claro: #6c62f0;
+    --roxo-principal: #4b3fe4;
+    --mist-dim: #C8C0B4;
+
+    /* Cores secundarias */
+    --roxo-escuro: #4037c7;
+    --azul-claro: #5b9bd5;
+    --azul-escuro: #4f5bd5;
+    --azul-pastel: #a8c8e8;
+    --indigo-acizentado: #29253d;
+    --verde: #499855;
+
+    /* Cores com transparencia */
+    --ambar-opaco: #f5b9427a;
+    --azul-opaco: #7076cf7b;
+    --azul-pastel-opaco: #a8c8e85b;
+    --roxo-mais-opaco: rgba(131, 124, 224, 0.251);
+    --roxo-opaco: rgba(108, 98, 240, 0.5);
+    --verde-opaco: #66d5775f;
+    --vermelho-opaco: #d566665f;
+
+
+    --void: #0E0C14;
+    --dusk: #1A1626;
+    --dusk-mid: #231E33;
+    --dusk-light: #2E2845;
+    --mist: #EDE8DF;
+    --mist-dim: #C8C0B4;
+    --dust: #8C8278;
+    --aurora: #A67FB5;
+    --aurora-soft: #C9AED8;
+    --aurora-glow: rgba(166 , 127, 181, 0.12);
+    --gradiente-aurora: linear-gradient(135deg, #A67FB5, #C97B5A);
+    --ember: #C97B5A;
+    --ember-soft: #E0A080;
+    --gold: #D4A96A;
+    --sage: #7A9E8A;
+    --border: rgba(237, 232, 223, 0.06);
+    --border-mid: rgba(237, 232, 223, 0.11);
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Jost', system-ui, sans-serif;
+
+    /* Transicoes */
+    --transition: all .5s ease;
+}

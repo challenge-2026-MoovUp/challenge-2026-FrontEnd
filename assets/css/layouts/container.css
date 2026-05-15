@@ -1,0 +1,10 @@
+/* Titulo principal reutilizavel */
+.title {
+    font-size: 7rem;
+    width: 100%;
+}
+
+.feat__container .title {
+    font-size: 6rem;
+    width: 60%;
+}

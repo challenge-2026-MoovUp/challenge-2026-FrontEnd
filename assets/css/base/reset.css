@@ -1,0 +1,42 @@
+/* Reset global */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Cormorant Garamond", sans-serif;
+}
+
+/* Base da pagina */
+
+html {
+    background-color: var(--indigo-profundo);
+    font-size: 62.5%;
+    height: 100%;
+    min-height: 100%;
+    overscroll-behavior-y: none;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--indigo-profundo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+    width: 100%;
+}
+
+body main {
+    flex: 1;
+}
+
+@supports (overflow: clip) {
+    html,
+    body {
+        overflow-x: clip;
+    }
+}

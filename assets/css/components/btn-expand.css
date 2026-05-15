@@ -1,0 +1,138 @@
+/* Accordion */
+.accordion {
+    color: var(--mist);
+    text-align: left;
+    padding: 1rem 0;
+    width: min(800px, 100%);
+    max-width: 800px;
+    background: var(--dusk);
+    border: 1px solid var(--aurora-glow);
+    border-radius: 16px;
+    overflow: hidden;
+    interpolate-size: allow-keywords;
+    transition: var(--transition);
+}
+
+.accordion summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 100;
+
+}
+
+.accordion__subtitle {
+    color: #666;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.6;
+    max-height: 80px;
+    opacity: 1;
+    overflow: hidden;
+    padding: 20px 0 0;
+    transition:
+        max-height 0.3s ease,
+        opacity 0.2s ease,
+        padding 0.3s ease;
+}
+
+.accordion__title {
+    font-weight: 100;
+}
+
+.accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion[open] .accordion__subtitle {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.accordion::details-content {
+    block-size: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition:
+        block-size 0.45s ease,
+        opacity 0.3s ease,
+        content-visibility 0.45s ease allow-discrete;
+}
+
+.accordion[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+}
+
+.accordion__content {
+    padding: 0 20px 20px;
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+
+.accordion summary i {
+    align-items: center;
+    border: 1px solid var(--border-mid);
+    border-radius: 50%;
+    color: var(--dust);
+    display: flex;
+    flex-shrink: 0;
+    font-style: normal;
+    height: 22px;
+    justify-content: center;
+    margin-top: 2px;
+    position: relative;
+    text-indent: -999px;
+    transition: transform 0.3s, border-color 0.25s, background 0.25s, color 0.25s;
+    overflow: hidden;
+    width: 22px;
+}
+
+.accordion summary i::before,
+.accordion summary i::after {
+    background: currentColor;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.accordion summary i::before {
+    height: 1.5px;
+    width: 10px;
+}
+
+.accordion summary i::after {
+    height: 10px;
+    width: 1.5px;
+}
+
+.accordion:hover {
+    background: rgba(180, 130, 255, 0.08);
+    border-color: rgba(180, 130, 255, 0.5);
+    box-shadow: 
+    0 0 20px rgba(180, 130, 255, 0.08),
+    inset 0 0 20px rgba(180, 130, 255, 0.03);
+}
+
+.accordion[open] summary i {
+    background: var(--aurora-glow);
+    border-color: var(--aurora-soft);
+    color: var(--aurora-soft);
+    transform: rotate(45deg);
+}
+
+@starting-style {
+    .accordion[open]::details-content {
+        block-size: 0;
+        opacity: 0;
+    }
+}

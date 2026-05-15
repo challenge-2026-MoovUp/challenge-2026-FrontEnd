@@ -1,0 +1,41 @@
+/* Grade dos cards de recursos */
+.feat__grid {
+    align-items: stretch;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin: 5rem auto 0;
+}
+
+.feature-large {
+    grid-column: span 2;
+}
+
+/* Grade dos cards de passos */
+.steps__grid {
+    background-color: var(--void);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 4rem;
+}
+
+/* Faixa da secao de recursos */
+.feat__section {
+    margin: 6rem 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 5rem 0;
+}
+
+.contact__content{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 60px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: start;
+}

@@ -1,0 +1,332 @@
+/* Grade dos cards de estatisticas */
+.cards {
+    display: grid;
+    font-size: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--void);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+}
+
+/* Card individual de estatistica */
+.stat__card {
+    border-left: 1px solid var(--border);
+    font-weight: bolder;
+    padding: 40px 10px;
+    height: auto;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.stat__card:first-child {
+    border-left: none;
+    border-radius: 30px 0 0 30px;
+}
+
+.stat__card:last-child {
+    border-radius: 0 30px 30px 0;
+}
+
+.stat__card:hover {
+    background-color: var(--dusk-mid);
+    box-shadow: 0 18px 40px rgba(166, 127, 181, 0.14);
+    transform: translateY(-4px);
+}
+
+
+/* Numero destacado do card de estatistica */
+.stat__card .numero {
+    color: var(--mist);
+    font-size: 5.5rem;
+    font-weight: 200;
+}
+
+.stat__card .numero span {
+    color: var(--ember);
+}
+
+.stat__card:hover .numero span {
+    color: var(--ember);
+}
+
+/* Descricao do card de estatistica */
+.stat__card .descricao {
+    font-weight: 200;
+    font-size: 2rem;
+    color: var(--mist);
+}
+
+
+/* Card individual de recurso */
+.feature {
+    background-color: var(--void);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--lavanda);
+    font-weight: bolder;
+    min-height: 150px;
+    padding: 3rem;
+    transition: .5s;
+}
+
+.feature:hover {
+    background-color: var(--aurora-glow);
+}
+
+.feature:nth-child(-n + 2) {
+    min-height: 250px;
+}
+
+/* Faixa dos passos */
+.steps__section {
+    background-color: rgba(14, 12, 20, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--border);
+    margin: 5rem calc(50% - 50vw) 0;
+    padding: 3rem 0;
+}
+
+/* Container dos passos */
+.steps {
+    margin: 0 auto;
+    width: 70%;
+}
+
+/* Etiqueta da secao de passos */
+.page__home .section-tag {
+    background-color: rgba(224, 160, 128, 0.18);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 30px 0;
+    padding: 5px 20px;
+}
+
+/* Subtitulo dos cards de passos */
+.steps__subtitle {
+    color: #727272;
+    font-size: 15px;
+    padding: 1rem 0;
+}
+
+/* Card individual de passo */
+.step__card {
+    color: var(--mist);
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    height: auto;
+    padding: 40px 24px;
+    text-align: left;
+    transition: var(--transition);
+}
+
+.step__card:first-child {
+    border-left: none;
+    border-radius: 30px 0 0 30px;
+}
+
+.step__card:last-child {
+    border-radius: 0 30px 30px 0;
+}
+
+.step__card:hover {
+    background-color: var(--dusk-mid);
+    box-shadow: 0 18px 40px rgba(166, 127, 181, 0.14);
+    transform: translateY(-4px);
+}
+
+/* Numero base dos passos */
+.steps .num {
+    font-family: 'Jost', sans-serif;
+    font-size: 1.7rem;
+    align-items: center;
+    align-self: flex-start;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    display: inline-flex;
+    font-weight:300;
+    height: 32px;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    width: 32px;
+}
+
+.start__card {
+    align-items: center;
+    background-color: var(--dusk);
+    border-radius:30px;
+    border: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    margin: 6rem 0;
+    overflow: hidden;
+    padding: 6rem;
+    position: relative;
+    text-align: center;
+}
+
+.start__card::before {
+    border-radius: 50%;
+    content: "";
+    filter: blur(90px);
+    height: 260px;
+    opacity: 0.45;
+    pointer-events: none;
+    position: absolute;
+    width: 260px;
+    z-index: 0;
+}
+
+.start__card::before {
+    background: #6B3D8A;
+    left: -90px;
+    top: -90px;
+}
+
+.start__card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.start__card .title {
+    font-size: 6rem;
+}
+.start__card .subtitle {
+    color: var(--dust);
+    font-size: 4rem;
+    margin: 20px 0;
+    width: 80%;
+}
+
+.hero__actions {
+    padding-top: 2rem;
+}
+
+.start__card .btn.btn__cta {
+    font-weight: 500;
+}
+
+.start__card .hero__actions {
+    justify-content: center;
+}
+
+.steps__topic {
+    font-size: 2rem;
+    padding-top: 10px;
+    font-weight: 100;
+}
+
+/* Numero do primeiro passo */
+.steps .num1 {
+    background-color: rgba(46, 40, 69, 0.22);
+    color: var(--dusk-light);
+}
+
+/* Numero do segundo passo */
+.steps .num2 {
+    background-color: rgba(166, 127, 181, 0.12);
+    color: var(--aurora-soft);
+}
+
+/* Numero do terceiro passo */
+.steps .num3 {
+    background-color: rgba(122, 158, 138, 0.18);
+    color: var(--sage);
+}
+
+/* Numero do quarto passo */
+.steps .num4 {
+    background-color: rgba(212, 169, 106, 0.18);
+    color: var(--gold);
+}
+
+.contact__info-cards {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: minmax(0, 1fr) 130px;
+}
+
+.contact__card {
+    background-color: var(--dusk);
+    border: 1px solid var(--border-mid);
+    border-radius: 20px;
+    max-width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 20px;
+    transition: .2s;
+}
+
+.contact__info-cards .accordion__flex {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+}
+
+.contact__card:hover {
+    background-color: var(--dusk-mid);
+    box-shadow: 0 18px 40px rgba(166, 127, 181, 0.14);
+    transform: translateX(9px);
+    border-color: var(--aurora);
+    border-left: 4px solid var(--aurora-soft);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.contact__card .icon {
+    font-size: 2.3rem;
+    width: fit-content;
+    align-self: center;
+    padding: 8px 10px;
+    margin: 10px;
+}
+
+.contact__card-label {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: var(--mist);
+
+}
+
+.contact__card-value {
+    font-family: var(--font-sans);
+    font-weight: 400px;
+    color: var(--dust)
+}
+
+.contact__info {
+    max-width: 390px;
+}
+
+.contact__form {
+    max-width: 500px;
+}
+
+.accordion__flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.page__contato .accordion {
+    align-self: center;
+}
+
+.form__item {
+    background-color: var(--dusk);
+    border: 1px solid var(--border-mid);
+    border-radius: 20px;
+    max-width: 600px;
+    min-height: 620px;
+    transition: .2s;
+}
+
+.contact__form {
+    margin: 30px;
+}

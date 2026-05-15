@@ -1,0 +1,43 @@
+/* Etiqueta reutilizavel */
+.section-tag {
+    align-items: center;
+    color: var(--aurora-soft);
+    display: inline-flex;
+    font-weight: 300;
+    font-family: 'Jost', sans-serif;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+.section-tag::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--aurora);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    animation: breathe 3s ease-in-out infinite;
+}
+
+/* Icone dentro da etiqueta */
+.section-tag span {
+    color: var(--ambar);
+    margin-right: 0.5rem;
+}
+
+
+@keyframes breathe {
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
