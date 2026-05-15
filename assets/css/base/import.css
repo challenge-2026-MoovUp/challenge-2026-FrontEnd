@@ -23,6 +23,7 @@
 @import url('../pages/contato.css');
 @import url('../pages/faq.css');
 @import url('../pages/quem-somos.css');
+@import url('../pages/sobre.css');
 
 /* Responsividade */
 @import url('./responsive.css');

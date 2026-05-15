@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/base/import.css">
     <link rel="icon" type="image/png" href="../assets/images/moov-up-icon.png">
+    <script src="../assets/js/pages/sobre.js" defer></script>
     <title>Sobre</title>
 </head>
 <body class="page__sobre">
+    <div class="ambient" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
     <header class="header">
         <div class="header__content">
             <div class="logo">
@@ -21,11 +27,114 @@
                 <a href="./faq.html">FAQ</a>
                 <a href="./contato.html">Contato</a>
             </nav>
-            <a href="#" class="btn btn__primary">Começar grátis</a>
+            <a href="./contato.html" class="btn btn__primary">Come&ccedil;ar gr&aacute;tis</a>
         </div>
     </header>
 
-    <main></main>
+    <main id="sobre-top">
+        <section class="sobre__hero" data-animate>
+            <div class="sobre__hero-content">
+                <p class="section-tag">Sobre a Solu&ccedil;&atilde;o</p>
+                <h1 class="sobre__title">Mobilidade urbana com <span>recompensas reais</span></h1>
+                <p class="sobre__subtitle">A MoovUp conecta atitudes sustent&aacute;veis a benef&iacute;cios pr&aacute;ticos, transformando pontos em acesso ao transporte p&uacute;blico e ajudando pessoas a se moverem melhor pela cidade.</p>
+                <div class="sobre__actions">
+                    <a href="#sobre-beneficios" class="btn btn__cta btn__cta--primary" data-scroll-link>VER BENEF&Iacute;CIOS</a>
+                    <a href="./contato.html" class="btn btn__cta btn__cta--outline">FALE CONOSCO</a>
+                </div>
+            </div>
+
+            <div class="sobre__panel" aria-label="Resumo da plataforma">
+                <img src="../assets/images/moov-up-icon.png" alt="Icone MoovUp" class="sobre__panel-logo">
+                <p class="sobre__panel-kicker">MoovUp</p>
+                <h2>Interaja, acumule e resgate.</h2>
+                <p>Cada a&ccedil;&atilde;o dentro da plataforma aproxima o usu&aacute;rio de uma cidade mais acess&iacute;vel, consciente e conectada.</p>
+            </div>
+        </section>
+
+        <section class="sobre__stats" aria-label="Indicadores da MoovUp" data-animate>
+            <div class="sobre__stat">
+                <strong data-counter data-target="1200" data-prefix="+">0</strong>
+                <span>usu&aacute;rios impactados</span>
+            </div>
+            <div class="sobre__stat">
+                <strong data-counter data-target="98" data-suffix="%">0</strong>
+                <span>satisfa&ccedil;&atilde;o estimada</span>
+            </div>
+            <div class="sobre__stat">
+                <strong data-counter data-target="24" data-suffix="h">0</strong>
+                <span>suporte digital</span>
+            </div>
+        </section>
+
+        <section class="sobre__benefits" id="sobre-beneficios" data-animate>
+            <div class="sobre__section-head">
+                <p class="section-tag">Benef&iacute;cios</p>
+                <h2>O que a MoovUp entrega</h2>
+            </div>
+
+            <div class="sobre__benefit-layout">
+                <div class="sobre__benefit-list" role="tablist" aria-label="Beneficios da MoovUp">
+                    <button class="sobre__benefit-card is-active" type="button" role="tab" aria-selected="true" data-benefit="mobilidade">
+                        <span>01</span>
+                        <strong>Mobilidade acess&iacute;vel</strong>
+                        <small>Recompensas voltadas ao transporte p&uacute;blico.</small>
+                    </button>
+                    <button class="sobre__benefit-card" type="button" role="tab" aria-selected="false" data-benefit="sustentabilidade">
+                        <span>02</span>
+                        <strong>Impacto sustent&aacute;vel</strong>
+                        <small>A&ccedil;&otilde;es positivas viram pontos acumulados.</small>
+                    </button>
+                    <button class="sobre__benefit-card" type="button" role="tab" aria-selected="false" data-benefit="controle">
+                        <span>03</span>
+                        <strong>Controle simples</strong>
+                        <small>Saldo, hist&oacute;rico e resgates em um s&oacute; lugar.</small>
+                    </button>
+                </div>
+
+                <article class="sobre__benefit-detail" aria-live="polite">
+                    <p class="sobre__detail-tag" data-benefit-index>01</p>
+                    <h3 data-benefit-title>Mobilidade acess&iacute;vel</h3>
+                    <p data-benefit-text>Os pontos acumulados podem ser convertidos em passagens, ajudando o usu&aacute;rio a economizar no deslocamento di&aacute;rio e incentivando o uso de transporte coletivo.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="sobre__timeline" data-animate>
+            <div class="sobre__section-head">
+                <p class="section-tag">Jornada</p>
+                <h2>Como a ideia evolui</h2>
+            </div>
+
+            <div class="sobre__steps">
+                <button class="sobre__step is-active" type="button" data-step>
+                    <span>1</span>
+                    <strong>Cadastro</strong>
+                    <p>O usu&aacute;rio entra na plataforma e come&ccedil;a a participar.</p>
+                </button>
+                <button class="sobre__step" type="button" data-step>
+                    <span>2</span>
+                    <strong>Intera&ccedil;&atilde;o</strong>
+                    <p>A&ccedil;&otilde;es e campanhas geram pontua&ccedil;&atilde;o.</p>
+                </button>
+                <button class="sobre__step" type="button" data-step>
+                    <span>3</span>
+                    <strong>Ac&uacute;mulo</strong>
+                    <p>O saldo cresce conforme o engajamento do usu&aacute;rio.</p>
+                </button>
+                <button class="sobre__step" type="button" data-step>
+                    <span>4</span>
+                    <strong>Resgate</strong>
+                    <p>Os pontos se transformam em benef&iacute;cios de mobilidade.</p>
+                </button>
+            </div>
+        </section>
+
+        <section class="sobre__cta" data-animate>
+            <p class="section-tag">Pr&oacute;ximo passo</p>
+            <h2>Pronto para transformar pontos em movimento?</h2>
+            <a href="./contato.html" class="btn btn__cta btn__cta--primary">COME&Ccedil;AR AGORA</a>
+        </section>
+    </main>
 
     <footer>
         <div class="footer">

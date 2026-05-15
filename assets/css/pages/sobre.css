@@ -1,0 +1,423 @@
+.page__sobre main {
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 0 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.page__sobre .ambient {
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    z-index: 0;
+}
+
+.page__sobre .orb {
+    animation: sobreDrift 24s ease-in-out infinite alternate;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.35;
+    position: absolute;
+}
+
+.page__sobre .orb-1 {
+    background: radial-gradient(circle, var(--sage) 0%, transparent 70%);
+    height: 520px;
+    right: -140px;
+    top: 80px;
+    width: 520px;
+}
+
+.page__sobre .orb-2 {
+    background: radial-gradient(circle, var(--ember-soft) 0%, transparent 76%);
+    bottom: 12%;
+    height: 420px;
+    left: -160px;
+    width: 520px;
+}
+
+.sobre__hero {
+    align-items: center;
+    display: grid;
+    gap: 48px;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    min-height: 72vh;
+    padding: 8rem 0 4rem;
+}
+
+.page__sobre .section-tag {
+    background: transparent;
+    border: 0;
+    color: var(--aurora-soft);
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.page__sobre .section-tag::before {
+    content: none;
+}
+
+.sobre__title {
+    color: var(--mist);
+    font-size: 5.5rem;
+    font-weight: 100;
+    line-height: 1.02;
+    margin: 1rem 0 1.5rem;
+}
+
+.sobre__title span,
+.sobre__section-head h2 span {
+    background: var(--gradiente-aurora);
+    background-clip: text;
+    font-style: italic;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sobre__subtitle {
+    color: var(--mist-dim);
+    font-family: var(--font-sans);
+    font-size: 1.55rem;
+    font-weight: 200;
+    line-height: 1.55;
+    max-width: 620px;
+}
+
+.sobre__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 2.5rem;
+}
+
+.sobre__actions .btn__cta,
+.sobre__cta .btn__cta {
+    margin: 0;
+}
+
+.sobre__panel {
+    background:
+        linear-gradient(145deg, rgba(35, 30, 51, 0.9), rgba(26, 22, 38, 0.76)),
+        url("../../images/hero-image.png") center / cover;
+    border: 1px solid var(--border-mid);
+    border-radius: 30px;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.24);
+    min-height: 430px;
+    overflow: hidden;
+    padding: 3rem;
+    position: relative;
+}
+
+.sobre__panel::before {
+    background: rgba(14, 12, 20, 0.34);
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
+.sobre__panel > * {
+    position: relative;
+    z-index: 1;
+}
+
+.sobre__panel-logo {
+    max-width: 82px;
+}
+
+.sobre__panel-kicker {
+    color: var(--aurora-soft);
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    margin-top: 6rem;
+    text-transform: uppercase;
+}
+
+.sobre__panel h2 {
+    color: var(--mist);
+    font-size: 3.3rem;
+    font-weight: 200;
+    line-height: 1.05;
+    margin: 1rem 0;
+}
+
+.sobre__panel p:last-child {
+    color: var(--mist-dim);
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    line-height: 1.45;
+    max-width: 360px;
+}
+
+.sobre__stats {
+    background: var(--dusk);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 1rem 0 8rem;
+    overflow: hidden;
+}
+
+.sobre__stat {
+    border-left: 1px solid var(--border);
+    padding: 2.8rem;
+    text-align: center;
+}
+
+.sobre__stat:first-child {
+    border-left: 0;
+}
+
+.sobre__stat strong {
+    color: var(--mist);
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.sobre__stat span {
+    color: var(--mist-dim);
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    margin-top: 0.8rem;
+}
+
+.sobre__benefits,
+.sobre__timeline,
+.sobre__cta {
+    margin-bottom: 8rem;
+}
+
+.sobre__section-head {
+    margin-bottom: 2.5rem;
+    max-width: 720px;
+}
+
+.sobre__section-head h2,
+.sobre__cta h2 {
+    color: var(--mist);
+    font-size: 4rem;
+    font-weight: 100;
+    line-height: 1.08;
+    margin-top: 0.8rem;
+}
+
+.sobre__benefit-layout {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+}
+
+.sobre__benefit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sobre__benefit-card,
+.sobre__step {
+    background: var(--dusk);
+    border: 1px solid var(--border);
+    color: var(--mist);
+    cursor: pointer;
+    font-family: var(--font-sans);
+    text-align: left;
+    transition: border-color 0.25s ease, transform 0.25s ease, background-color 0.25s ease;
+}
+
+.sobre__benefit-card {
+    border-radius: 22px;
+    display: grid;
+    gap: 7px;
+    padding: 1.6rem;
+}
+
+.sobre__benefit-card:hover,
+.sobre__benefit-card:focus-visible,
+.sobre__benefit-card.is-active,
+.sobre__step:hover,
+.sobre__step:focus-visible,
+.sobre__step.is-active {
+    background: var(--dusk-mid);
+    border-color: rgba(201, 174, 216, 0.34);
+    transform: translateY(-3px);
+}
+
+.sobre__benefit-card span,
+.sobre__detail-tag,
+.sobre__step span {
+    color: var(--ember-soft);
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.sobre__benefit-card strong {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.sobre__benefit-card small {
+    color: var(--mist-dim);
+    font-size: 1.1rem;
+    line-height: 1.35;
+}
+
+.sobre__benefit-detail {
+    align-items: flex-start;
+    background:
+        radial-gradient(circle at 85% 15%, rgba(201, 123, 90, 0.14), transparent 38%),
+        var(--dusk);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 360px;
+    padding: 3rem;
+}
+
+.sobre__benefit-detail h3 {
+    color: var(--mist);
+    font-size: 3.4rem;
+    font-weight: 200;
+    line-height: 1.1;
+    margin: 1rem 0;
+}
+
+.sobre__benefit-detail p:last-child {
+    color: var(--mist-dim);
+    font-family: var(--font-sans);
+    font-size: 1.45rem;
+    line-height: 1.5;
+}
+
+.sobre__steps {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.sobre__step {
+    border-radius: 24px;
+    min-height: 250px;
+    padding: 2rem;
+}
+
+.sobre__step span {
+    align-items: center;
+    border: 1px solid var(--aurora-glow);
+    border-radius: 50%;
+    display: inline-flex;
+    height: 42px;
+    justify-content: center;
+    width: 42px;
+}
+
+.sobre__step strong {
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 3rem 0 1rem;
+}
+
+.sobre__step p {
+    color: var(--mist-dim);
+    font-size: 1.15rem;
+    line-height: 1.45;
+}
+
+.sobre__cta {
+    align-items: flex-start;
+    background: var(--dusk);
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.sobre__cta h2 {
+    max-width: 740px;
+    margin-bottom: 2rem;
+}
+
+[data-animate] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+[data-animate].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page__sobre .footer {
+    margin-top: 2rem;
+}
+
+@keyframes sobreDrift {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(36px, -28px, 0);
+    }
+}
+
+@media (max-width: 980px) {
+    .sobre__hero,
+    .sobre__benefit-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre__stats,
+    .sobre__steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .page__sobre main {
+        padding: 0 1.5rem;
+    }
+
+    .sobre__hero {
+        padding-top: 6rem;
+    }
+
+    .sobre__title {
+        font-size: 3.8rem;
+    }
+
+    .sobre__section-head h2,
+    .sobre__cta h2 {
+        font-size: 3rem;
+    }
+
+    .sobre__stats,
+    .sobre__steps {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre__stat {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+    }
+
+    .sobre__stat:first-child {
+        border-top: 0;
+    }
+}
